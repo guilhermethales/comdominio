@@ -1,0 +1,46 @@
+<div>
+  <div class="header">
+    <div class="container">
+      <div class="itens">
+        <div class="itens-title">
+          <h1 class="title__item">{{ sub_title }}</h1>
+        </div>
+        <div class="itens-links">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+        <form @submit.prevent="save">
+          <div class="form-group col col-md-6">
+            <label for="email">Nome:</label>
+            <input v-model="morador.nome" type="text" class="form-control" id="nome" required>
+          </div>
+          <div class="form-group col col-md-6">
+              <label for="email">Email:</label>
+              <input v-model="morador.email" type="email" class="form-control" id="email">
+            </div>
+          <div class="form-group col col-md-2">
+            <label for="pwd">CPF:</label>
+            <input v-model="morador.cpfcnpj" type="text" class="form-control" id="cpfcnpj">
+          </div>
+          <div class="form-group col col-md-2">
+            <label for="pwd">Telefone:</label>
+            <input v-model="morador.telefone" type="text" class="form-control" id="telefone">
+          </div>
+          <div class="form-group col col-md-4">
+            <label for="pwd">Login:</label>
+            <input v-model="morador.login" type="text" class="form-control" id="login">
+          </div>
+          <div class="form-group col col-md-4">
+            <label for="pwd">Senha:</label>
+            <input v-model="morador.senha" type="password" class="form-control" id="senha">
+          </div>
+          <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+        </form>
+      </div>
+      <hr>
+      <a href="#/morador" class="btn btn-voltar">Voltar</a>
+</div>

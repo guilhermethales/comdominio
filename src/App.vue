@@ -35,4 +35,5 @@
   export default {}
 </script>
 
-<style lang="scss"></style>
+<style src="bootstrap/dist/css/bootstrap.css" lang="css"></style>
+<style src="./assets/sass/paper-dashboard.scss" lang="scss"></style>
