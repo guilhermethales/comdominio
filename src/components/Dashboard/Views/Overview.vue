@@ -9,7 +9,7 @@
             <i :class="stats.icon"></i>
           </div>
           <div class="numbers" slot="content">
-            <p>{{stats.title}}</p>
+            <a class="home-card-title" :href="`${stats.href}`">{{stats.title}}</a>
             {{stats.value}}
           </div>
           <div class="stats" slot="footer">
@@ -83,33 +83,33 @@
         statsCards: [
           {
             type: 'warning',
-            icon: 'ti-server',
-            title: 'Capacity',
-            value: '105GB',
+            href: '#/admin/morador',
+            icon: 'ti-user',
+            title: 'Morador',
             footerText: 'Updated now',
             footerIcon: 'ti-reload'
           },
           {
             type: 'success',
-            icon: 'ti-wallet',
-            title: 'Revenue',
-            value: '$1,345',
+            href: '#/admin/lancamento',
+            icon: 'ti-money',
+            title: 'Lançamento',
             footerText: 'Last day',
             footerIcon: 'ti-calendar'
           },
           {
             type: 'danger',
-            icon: 'ti-pulse',
-            title: 'Errors',
-            value: '23',
+            href: '#/admin/agendamento',
+            icon: 'ti-world',
+            title: 'Agendamento',
             footerText: 'In the last hour',
             footerIcon: 'ti-timer'
           },
           {
             type: 'info',
-            icon: 'ti-twitter-alt',
-            title: 'Followers',
-            value: '+45',
+            href: '#/admin/servico',
+            icon: 'ti-server',
+            title: 'Serviço',
             footerText: 'Updated now',
             footerIcon: 'ti-reload'
           }

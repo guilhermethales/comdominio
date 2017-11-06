@@ -1,16 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <div class="container">
-        <div class="itens">
-          <div class="itens-title">
-            <h1 class="title__item">Informações do Morador</h1>
-          </div>
-          <div class="itens-links">
-
-          </div>
-        </div>
-      </div>
+      <h1 class="title__item">Informações do Morador</h1>
     </div>
 
     <div class="main">
@@ -30,7 +21,7 @@
           </div>
         </div>
         <hr>
-          <a href="#/morador" class="btn-voltar">Voltar</a>
+          <a href="#/admin/morador" class="btn-voltar">Voltar</a>
       </div>
     </div>
   </div>
@@ -61,7 +52,6 @@
 <style lang="scss">
   .main {
     background-color: #fff;
-    margin: 5px;
   }
 
   .main-title {

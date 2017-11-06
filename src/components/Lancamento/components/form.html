@@ -1,0 +1,77 @@
+<div>
+  <div class="card">
+    <div class="header">
+      <h4 class="title">{{ sub_title }}</h4>
+    </div>
+
+  <div class="content">
+    <form @submit.prevent="save" class="form">
+      <div class="row">
+        <div class="form-group col col-md-6">
+          <label for="email">Descrição:</label>
+          <input v-model="lancamento.descricao" type="text" class="form-control border-input" id="nome" required>
+        </div>
+        <div class="form-group col col-md-6">
+          <label for="tipoLancamento">Tipo de Lançamento:</label>
+          <select id="tipoLancamento" class="form-control border-input">
+            <option value="0" v-model="lancamento.tipoLancamento.descricao">Débito</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col col-md-12">
+          <label for="email">Valor Total:</label>
+          <input v-model="calcularTotal" type="email" class="form-control border-input" id="email" disabled>
+        </div>
+      </div>
+
+      <h1 class="itens-title">Adicionar Itens</h1>
+
+      <div class="row">
+        <div class="form-group col col-md-6">
+          <label for="descricao">Descrição:</label>
+          <input type="text" class="form-control border-input" v-model="itemLancamento.descricao" id="descricao" required>
+        </div>
+        <div class="form-group col col-md-3">
+          <label for="valorUnitario">Valor Unitário:</label>
+          <input  type="text" class="form-control border-input" v-model="itemLancamento.valorUnit"  id="valorUnitario">
+        </div>
+        <div class="form-group col col-md-3">
+          <label for="quantidade">Quantidade:</label>
+          <input type="text" class="form-control border-input" v-model="itemLancamento.quantidade"  id="quantidade">
+        </div>
+
+        <a class="btn btn-addItem" @click.prevent="saveItem">Adicionar Item</a>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Descricao</th>
+            <th>Valor Unitario</th>
+            <th>Quantidade</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr v-for="item in itensLancamento">
+            <td>{{ item.descricao }}</td>
+            <td>{{ item.valorUnit }}</td>
+            <td>{{ item.quantidade }}</td>
+            <td><a :href="`#/lancamento/editar/${lancamento.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a><a href="" class="btn btn-sm btn-danger" @click.prevent="remove(lancamento.id)">Excluir</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row">
+        <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+      </div>
+    </form>
+  </div>
+
+  <hr>
+  <a href="#/admin/lancamento" class="btn-voltar">Voltar</a>
+  </div>
+</div>

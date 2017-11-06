@@ -8,12 +8,12 @@ export default [
   {
     path: '/',
     component: DashboardLayout,
-    redirect: '/admin/overview'
+    redirect: '/admin/home'
   },
   {
     path: '/admin',
     component: DashboardLayout,
-    redirect: '/admin/stats',
+    redirect: '/admin/home',
     children: [
       {
         path: 'morador',
@@ -21,17 +21,17 @@ export default [
         component: Morador
       },
       {
-        path: 'morador/novo',
+        path: '/morador/novo',
         name: 'InserirMorador',
         component: inserirMorador
       },
       {
-        path: 'morador/editar/:id',
+        path: '/morador/editar/:id',
         name: 'EditarMorador',
         component: editarMorador
       },
       {
-        path: 'morador/list/:id',
+        path: '/morador/list/:id',
         name: 'VisualizarMorador',
         component: visualizarMorador
       }

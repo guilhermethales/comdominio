@@ -4,7 +4,7 @@ export default {
   template: require('./form.html'),
   data () {
     return {
-      sub_title: 'Editar Morador'
+      sub_title: 'Edição de Morador'
     }
   },
   created () {

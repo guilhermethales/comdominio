@@ -37,3 +37,4 @@
 
 <style src="bootstrap/dist/css/bootstrap.css" lang="css"></style>
 <style src="./assets/sass/paper-dashboard.scss" lang="scss"></style>
+<style src="./assets/sass/app.scss" lang="scss"></style>

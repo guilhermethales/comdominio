@@ -3,7 +3,7 @@ import DashboardLayout from './Layout/DashboardLayout.vue'
 import NotFound from '../GeneralViews/NotFoundPage.vue'
 
 // Admin pages
-import Overview from './Views/Overview.vue'
+import Home from './Views/Overview.vue'
 import UserProfile from './Views/UserProfile.vue'
 import Notifications from './Views/Notifications.vue'
 import Icons from './Views/Icons.vue'
@@ -15,17 +15,17 @@ export default [
   {
     path: '/',
     component: DashboardLayout,
-    redirect: '/admin/overview'
+    redirect: '/admin/home'
   },
   {
     path: '/admin',
     component: DashboardLayout,
-    redirect: '/admin/stats',
+    redirect: '/admin/home',
     children: [
       {
-        path: 'overview',
-        name: 'overview',
-        component: Overview
+        path: 'home',
+        name: 'home',
+        component: Home
       },
       {
         path: 'stats',

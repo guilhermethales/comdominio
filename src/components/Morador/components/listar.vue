@@ -4,7 +4,7 @@
       <slot name="header">
         <div class="row">
           <div class="col col-md-9">
-            <input type="text" v-model="configs.filter" class="form-control search" placeholder="Pesquise pelo nome do morador">
+            <input type="text" v-model="configs.filter" class="form-control border-input" placeholder="Pesquise pelo nome do morador">
           </div>
           <div class="col col-md-3">
             <a href="/#/morador/novo" class="btn btn-warning">Novo Morador</a>
@@ -53,14 +53,6 @@ export default {
   mounted () {
     this.$store.dispatch('getMoradores')
   },
-  methods: {
-    hasValue (item, column) {
-      return item[column.toLowerCase()] !== 'undefined'
-    },
-    itemValue (item, column) {
-      return item[column.toLowerCase()]
-    }
-  },
   computed: {
     tableClass () {
       return `table-${this.type}`
@@ -83,16 +75,8 @@ export default {
 </script>
 
 <style lang="scss">
-  .main-table {
-    padding-top: 1em;
-  }
 
-  .form-control.search {
-    border: 1px solid #d2d6de;
-
-    &:focus {
-      border: 1px solid #d2d6de;
-    }
+  .form-control.border-input {
     &::-webkit-input-placeholder {
       color: #bbb;
     }

@@ -6,6 +6,7 @@
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
+  padding-bottom: 1em;
 
   .image {
     width: 100%;
@@ -141,8 +142,10 @@
   .numbers {
     font-size: 2em;
     text-align: right;
-    p {
+    .home-card-title {
       margin: 0;
+      font-size: 22px;
+      color: #000;
     }
   }
   ul.team-members {
