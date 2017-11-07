@@ -11,7 +11,6 @@ import App from './App'
 
 // library imports
 import Chartist from 'chartist'
-import 'es6-promise/auto'
 
 // plugin setup
 Vue.use(GlobalComponents)

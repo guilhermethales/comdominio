@@ -27,5 +27,8 @@ export default {
     .then((response) => {
       context.commit('updateLancamentoView', response.data)
     })
+  },
+  saveItensLancamento (context, data) {
+    http.post('itemlancamento/post', data)
   }
 }

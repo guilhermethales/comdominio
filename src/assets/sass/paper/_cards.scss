@@ -141,10 +141,11 @@
   }
   .numbers {
     font-size: 2em;
-    text-align: right;
+    text-align: left;
+    padding: 0;
     .home-card-title {
       margin: 0;
-      font-size: 22px;
+      font-size: 18px;
       color: #000;
     }
   }

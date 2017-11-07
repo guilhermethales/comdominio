@@ -7,7 +7,6 @@
     <div class="row">
       <div class="col col-md-6">
         <div class="main">
-          <div class="container">
             <div class="row">
               <div class="col col-md-12">
               <h1 class="main-title">Lançamento {{ lancamento.descricao }}</h1>
@@ -24,12 +23,7 @@
               <a href="#/admin/lancamento" class="btn-voltar">Voltar</a>
 
               <modal v-if="showModal" @close="showModal = false">
-                <!--
-                  you can use custom content here to overwrite
-                  default content
-                -->
               </modal>
-          </div>
         </div>
       </div>
 
@@ -38,9 +32,6 @@
           <div class="header">
             <h4 class="title">Itens do Lançamento {{ lancamento.id }}</h4>
 
-            <div class="content">
-              Teste
-            </div>
           </div>
         </div>
       </div>

@@ -24,12 +24,24 @@ export default {
     save () {
       this.$store.dispatch('newLancamento', this.lancamento)
       .then(() => {
-        //  this.$store.dispatch('getUltimoLancamento')
-        this.$router.push('/admin/lancamento')
+        this.$store.dispatch('getUltimoLancamento')
+        // this.$router.push('/admin/lancamento')
+      })
+      .then(() => {
+        setTimeout(() => {
+          const listaItens = this.$store.state.lancamento.itensLancamento
+          listaItens.map((item) => {
+            item.lancamento = { id: this.$store.state.lancamento.lancamentoView.id }
+            setTimeout(() => {
+              this.$store.dispatch('saveItensLancamento', item)
+            },2000)
+          })
+          this.$router.push('/admin/lancamento')
+        }, 2000)
       })
     },
     saveItem () {
-      var item = this.itemLancamento
+      const item = this.itemLancamento
       const obj = { descricao: item.descricao, valorUnit: item.valorUnit, quantidade: item.quantidade }
       return this.$store.state.lancamento.itensLancamento.push(obj)
     },
