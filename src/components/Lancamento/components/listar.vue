@@ -44,8 +44,8 @@ import _ from 'lodash';
     data(){
       return {
         configs: {
-          order: 'asc',
-          orderBy: 'descricao',
+          order: 'desc',
+          orderBy: 'id',
           filter: ''
         }
       };

@@ -3,12 +3,6 @@ import http from 'src/http';
 
 export default {
   name: 'InserirLancamento',
-  //created() {
-  //  http.get('itemlancamento/list')
-  //    .then(response => {
-  //      this.itensLancamento = response.data;
-  //    });
-  //},
   template: require('./form.html'),
   data () {
     return {
@@ -24,20 +18,18 @@ export default {
     save () {
       this.$store.dispatch('newLancamento', this.lancamento)
       .then(() => {
-        this.$store.dispatch('getUltimoLancamento')
-        // this.$router.push('/admin/lancamento')
+          this.$store.dispatch('getUltimoLancamento')
+          // this.$router.push('/admin/lancamento')
       })
       .then(() => {
-        setTimeout(() => {
+        setTimeout(() =>{
           const listaItens = this.$store.state.lancamento.itensLancamento
           listaItens.map((item) => {
             item.lancamento = { id: this.$store.state.lancamento.lancamentoView.id }
-            setTimeout(() => {
               this.$store.dispatch('saveItensLancamento', item)
-            },2000)
           })
           this.$router.push('/admin/lancamento')
-        }, 2000)
+        },1000)
       })
     },
     saveItem () {

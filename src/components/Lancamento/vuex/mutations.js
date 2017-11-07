@@ -1,8 +1,8 @@
 export default {
-  updateLancamentoList(state, data) {
-    state.lancamentosList = data;
+  updateLancamentoList (state, data) {
+    state.lancamentosList = data
   },
-  updateLancamentoView(state, data) {
-    state.lancamentoView = data;
+  updateLancamentoView (state, data) {
+    state.lancamentoView = data
   }
 }
