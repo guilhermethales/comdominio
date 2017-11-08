@@ -12,18 +12,14 @@
               <h1 class="main-title">Lançamento {{ lancamento.descricao }}</h1>
               <p>ID: {{ lancamento.id }}</p>
               <p>Descrição: {{ lancamento.descricao }}</p>
-              <p>Valor Total: {{ lancamento.valortotal }}</p>
+              <p><strong>Valor Total:{{ lancamento.valortotal }}</strong></p>
               <p>Tipo de Lançamento: {{ lancamento.tipoLancamento.descricao }}</p>
-                <a href="" id="show-modal" class="btn btn-warning" @click.prevent="showModal = true">Adicionar Itens</a>
                 <a :href="`#/lancamento/editar/${lancamento.id}`" class="btn btn-primary" style="margin:0 5px;">Editar Lançamento</a>
-                <a href="" class="btn btn-danger" @click.prevent="remove(lancamento.id)">Excluir</a>
+                <a href="" class="btn btn-danger" @click.prevent="confirmDelete(lancamento.id)">Excluir</a>
               </div>
             </div>
             <hr>
               <a href="#/admin/lancamento" class="btn-voltar">Voltar</a>
-
-              <modal v-if="showModal" @close="showModal = false">
-              </modal>
         </div>
       </div>
 
@@ -36,11 +32,12 @@
         </div>
       </div>
     </div>
+    <ModalConfirmacao :user="selectedUser" v-if="showModal" @confirm="remove" @cancel="showModal=false"/>
   </div>
 </template>
 
 <script>
-import modal from './modalItem';
+import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
 
   export default {
     name: 'VisualizarLancamento',
@@ -49,14 +46,24 @@ import modal from './modalItem';
       return this.$store.dispatch('getLancamento', this.$route.params.id);
     },
     components: {
-      modal
+      ModalConfirmacao
+    },
+    data () {
+      return {
+        lancamentoSelecionado: null,
+        showModal: false
+      }
     },
     methods: {
-      remove(id) {
-        this.$store.dispatch('removeLancamento', id)
-        .then(() => {
-          this.$router.push('/lancamento');
-        });
+      confirmDelete(id) {
+        this.lancamentoSelecionado = id
+        this.showModal = true
+      },
+      remove () {
+        this.showModal = false
+        this.$store.dispatch('removeLancamento', this.lancamentoSelecionado)
+        this.$router.push('/admin/lancamento')
+        this.lancamentoSelecionado = null
       }
     },
     computed: {

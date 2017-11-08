@@ -29,10 +29,11 @@
             <td>{{ morador.cpfcnpj }}</td>
             <td>{{ morador.telefone }}</td>
             <td>{{ morador.email }}</td>
-            <td><a :href="`#/morador/list/${morador.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/morador/editar/${morador.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a><a href="" class="btn btn-sm btn-danger" @click.prevent="remove(morador.id)">Excluir</a></td>
+            <td><a :href="`#/morador/list/${morador.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/morador/editar/${morador.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr>
         </tbody>
       </table>
+        <ModalConfirmacao :user="selectedUser" v-if="showModal" @confirm="remove" @cancel="showModal=false"/>
     </div>
   </div>
 </template>

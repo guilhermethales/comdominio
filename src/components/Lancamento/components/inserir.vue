@@ -53,7 +53,7 @@ export default {
     itensLancamento () {
       return this.$store.state.lancamento.itensLancamento
     },
-    calcularTotal() {
+    calcularTotal () {
       return this.lancamento.valortotal = this.calcularValorTotal();
     }
   }

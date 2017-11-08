@@ -29,7 +29,7 @@
             <td>{{ lancamento.descricao }}</td>
             <td>{{ lancamento.valortotal }}</td>
             <td>{{ lancamento.tipoLancamento.descricao }}</td>
-            <td><a :href="`#/lancamento/list/${lancamento.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/lancamento/editar/${lancamento.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a><a href="" class="btn btn-sm btn-danger" @click.prevent="remove(lancamento.id)">Excluir</a></td>
+            <td><a :href="`#/lancamento/list/${lancamento.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/lancamento/editar/${lancamento.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr>
         </tbody>
       </table>
@@ -50,7 +50,7 @@ import _ from 'lodash';
         }
       };
     },
-    mounted() {
+    mounted () {
       this.$store.dispatch('getLancamentos');
     },
     computed: {

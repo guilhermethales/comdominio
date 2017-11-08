@@ -14,34 +14,34 @@ const SidebarStore = {
       path: '/admin/morador'
     },
     {
-      name: 'Lançamento',
+      name: 'Financeiro',
       icon: 'ti-money',
       path: '/admin/lancamento'
     },
     {
-      name: 'User Profile',
-      icon: 'ti-user',
+      name: 'Blocos',
+      icon: 'ti-home',
       path: '/admin/stats'
     },
     {
-      name: 'Typography',
-      icon: 'ti-text',
+      name: 'Estacionamento',
+      icon: 'ti-car',
       path: '/admin/typography'
     },
     {
-      name: 'Icons',
-      icon: 'ti-pencil-alt2',
+      name: 'Funcionários',
+      icon: 'ti-star',
       path: '/admin/icons'
     },
     {
-      name: 'Maps',
-      icon: 'ti-map',
-      path: '/admin/maps'
-    },
-    {
-      name: 'Notifications',
+      name: 'Notificações',
       icon: 'ti-bell',
       path: '/admin/notifications'
+    },
+    {
+      name: 'Lazer',
+      icon: 'ti-basketball',
+      path: '/admin/maps'
     }
   ],
   displaySidebar (value) {

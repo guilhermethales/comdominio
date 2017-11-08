@@ -11,11 +11,9 @@ export default {
     return this.$store.dispatch('getMorador', this.$route.params.id)
   },
   methods: {
-    save () {
-      this.$store.dispatch('updateMorador', this.morador)
-      .then(() => {
-        this.$router.push('/morador')
-      })
+    async save () {
+      await this.$store.dispatch('updateMorador', this.morador)
+      await this.$router.push(`/morador/list/${this.morador.id}`)
     }
   },
   computed: {

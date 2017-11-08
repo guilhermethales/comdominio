@@ -14,7 +14,7 @@
         <div class="form-group col col-md-6">
           <label for="tipoLancamento">Tipo de Lançamento:</label>
           <select id="tipoLancamento" class="form-control border-input">
-            <option value="0" v-model="lancamento.tipoLancamento.descricao">Débito</option>
+            <option value="0">Débito</option>
           </select>
         </div>
       </div>
@@ -31,7 +31,7 @@
       <div class="row">
         <div class="form-group col col-md-6">
           <label for="descricao">Descrição:</label>
-          <input type="text" class="form-control border-input" v-model="itemLancamento.descricao" id="descricao" required>
+          <input type="text" class="form-control border-input" v-model="itemLancamento.descricao" id="descricao">
         </div>
         <div class="form-group col col-md-3">
           <label for="valorUnitario">Valor Unitário:</label>

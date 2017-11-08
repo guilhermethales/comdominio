@@ -1,10 +1,11 @@
 <script>
 export default {
-  name: 'InserirLancamento',
+  name: 'EditarLancamento',
   template: require('./form.html'),
   data() {
     return {
       sub_title: 'Edição de Lançamento',
+      itemLancamento: {}
     }
   },
   created() {
@@ -14,13 +15,33 @@ export default {
     save() {
       this.$store.dispatch('updateLancamento', this.lancamento)
       .then(() => {
-        this.$router.push('/admin/lancamento');
+        this.$router.push(`/lancamento/list/${this.lancamento.id}`);
       });
+    },
+    saveItem () {
+      const item = this.itemLancamento
+      const obj = { descricao: item.descricao, valorUnit: item.valorUnit, quantidade: item.quantidade }
+      return this.$store.state.lancamento.itensLancamento.push(obj)
+    },
+    calcularValorTotal () {
+      const itens = this.$store.state.lancamento.itensLancamento
+      let totalGeral = 0
+      itens.map((item) => {
+        const totalItem = item.valorUnit * item.quantidade
+        totalGeral = totalGeral + totalItem
+      })
+      return totalGeral
     }
   },
   computed: {
     lancamento() {
       return this.$store.state.lancamento.lancamentoView;
+    },
+    itensLancamento () {
+      return this.$store.state.lancamento.itensLancamento
+    },
+    calcularTotal() {
+      return this.lancamento.valortotal = this.calcularValorTotal();
     }
   }
 }
