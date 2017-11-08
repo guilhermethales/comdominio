@@ -18,8 +18,10 @@ export default {
     save () {
       this.$store.dispatch('newLancamento', this.lancamento)
       .then(() => {
+        setTimeout(() =>{
           this.$store.dispatch('getUltimoLancamento')
           // this.$router.push('/admin/lancamento')
+        },1000)
       })
       .then(() => {
         setTimeout(() =>{
@@ -29,7 +31,7 @@ export default {
               this.$store.dispatch('saveItensLancamento', item)
           })
           this.$router.push('/admin/lancamento')
-        },1000)
+        },2000)
       })
     },
     saveItem () {

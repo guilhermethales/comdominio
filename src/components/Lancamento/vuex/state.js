@@ -1,6 +1,6 @@
 export default {
   lancamentosList: [],
-  lancamentoView: [],
+  lancamentoView: {},
   itensLancamento: [
   ]
 }

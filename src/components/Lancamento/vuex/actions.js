@@ -1,4 +1,4 @@
-import http from 'src/http';
+import http from 'src/http'
 
 export default {
   getLancamentos (context) {
