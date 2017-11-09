@@ -11,7 +11,6 @@
             <th>Id</th>
             <th>Descrição</th>
             <th>Valor Total</th>
-            <th>Tipo</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -20,8 +19,7 @@
             <td>{{ lancamento.id }}</td>
             <td>{{ lancamento.descricao }}</td>
             <td>{{ lancamento.valortotal }}</td>
-            <td>{{ lancamento.tipoLancamento.descricao }}</td>
-            <td><a :href="`#/lancamento/list/${lancamento.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/lancamento/editar/${lancamento.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+            <td><a :href="`#/lancamento/list/${lancamento.id}`" class="btn btn-sm btn-default btn-small">Visualizar</a><a :href="`#/lancamento/editar/${lancamento.id}`" class="btn btn-sm btn-primary btn-small" style="margin:0 5px;">Editar</a></td>
           </tr>
         </tbody>
       </table>
@@ -32,7 +30,7 @@
 <script>
 export default {
   name: 'UltimosLancamentos',
-  mounted () {
+  created () {
     this.$store.dispatch('getUltimosLancamentos')
   },
   computed: {
@@ -55,5 +53,9 @@ export default {
   .header.lancamento {
     background-color: #41b883;
     padding-bottom: 10px !important;
+  }
+
+  .btn-small {
+    font-size: 10px !important;
   }
 </style>

@@ -18,10 +18,8 @@ export default {
     save () {
       this.$store.dispatch('newLancamento', this.lancamento)
       .then(() => {
-        setTimeout(() =>{
           this.$store.dispatch('getUltimoLancamento')
           // this.$router.push('/admin/lancamento')
-        },1000)
       })
       .then(() => {
         setTimeout(() =>{
@@ -37,6 +35,9 @@ export default {
     saveItem () {
       const item = this.itemLancamento
       const obj = { descricao: item.descricao, valorUnit: item.valorUnit, quantidade: item.quantidade }
+      item.descricao = ""
+      item.valorUnit = ""
+      item.quantidade = ""
       return this.$store.state.lancamento.itensLancamento.push(obj)
     },
     calcularValorTotal () {

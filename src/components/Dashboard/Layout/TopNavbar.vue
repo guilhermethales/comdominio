@@ -15,7 +15,7 @@
           <li class="open">
             <a href="#" class="dropdown-toggle btn-magnify" data-toggle="dropdown">
               <i class="ti-panel"></i>
-              <p>Stats</p>
+              <p>S</p>
             </a>
           </li>
              <drop-down title="5 Notifications" icon="ti-bell">
@@ -29,7 +29,7 @@
             <a href="#" class="btn-rotate">
               <i class="ti-settings"></i>
               <p>
-                Settings
+                Configurações
               </p>
             </a>
           </li>

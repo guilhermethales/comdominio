@@ -14,7 +14,9 @@ export default {
     save () {
       this.$store.dispatch('newMorador', this.morador)
       .then(() => {
-        this.$router.push('/admin/morador')
+        setTimeout(() => {
+          this.$router.push('/admin/morador')
+        }, 500);
       })
     }
   }

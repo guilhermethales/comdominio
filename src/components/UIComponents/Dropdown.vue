@@ -3,7 +3,7 @@
     <a class="dropdown-toggle btn-rotate" data-toggle="dropdown" href="javascript:void(0)">
       <slot name="title">
         <i :class="icon"></i>
-        <p class="notification">{{title}}
+        <p class="notification">Notificações
           <b class="caret"></b>
         </p>
       </slot>

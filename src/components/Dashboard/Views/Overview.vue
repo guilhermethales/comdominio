@@ -28,14 +28,14 @@
 
       <div class="col col-md-6 col-xs-12">
         <chart-card :chart-data="preferencesChart.data"  chart-type="Pie">
-          <h4 class="title" slot="title">Email Statistics</h4>
-          <span slot="subTitle"> Last campaign performance</span>
+          <h4 class="title" slot="title">Estacionamento</h4>
+          <span slot="subTitle"> </span>
           <span slot="footer">
             <i class="ti-timer"></i> Campaign set 2 days ago</span>
           <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Open
-            <i class="fa fa-circle text-danger"></i> Bounce
-            <i class="fa fa-circle text-warning"></i> Unsubscribe
+            <i class="fa fa-circle text-info"></i> Vagas Disponíveis
+            <i class="fa fa-circle text-danger"></i> Vagas Livres
+            <i class="fa fa-circle text-warning"></i> Vagas Ocupadas
           </div>
         </chart-card>
       </div>
