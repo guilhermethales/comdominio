@@ -4,13 +4,13 @@ export default {
   getLancamentos (context) {
     http.get('lancamento/list')
     .then((response) => {
-      context.commit('updateLancamentoList', response.data);
+      context.commit('updateLancamentoList', response.data)
     })
   },
   getLancamento (context, id) {
     http.get(`lancamento/list/${id}`)
     .then((response) => {
-      context.commit('updateLancamentoView', response.data);
+      context.commit('updateLancamentoView', response.data)
     })
   },
   newLancamento (context, data) {
@@ -29,6 +29,12 @@ export default {
     })
   },
   saveItensLancamento (context, data) {
-    http.post('itemlancamento/post', data)
+    http.post('itemlancamento/postmany', data)
+  },
+  getItensLancamento (context, idLancamento) {
+    http.get(`itemlancamento/lancamento/${idLancamento}`)
+    .then((response) => {
+      context.commit('updateItensLancamento', response.data)
+    })
   }
 }

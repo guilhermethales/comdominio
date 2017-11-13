@@ -14,7 +14,7 @@
           <p>CPF: {{ morador.cpfcnpj }}</p>
           <p>Telefone: {{ morador.telefone }}</p>
           <p>Email: {{ morador.email }}</p>
-          <p>Email: {{ morador.login }}</p>
+          <p>Login: {{ morador.login }}</p>
 
             <a :href="`#/morador/editar/${morador.id}`" class="btn btn-primary" style="margin:0 5px;">Editar</a>
             <a href="" class="btn btn-danger" @click.prevent="confirmDelete(morador.id)">Excluir</a>

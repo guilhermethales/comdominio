@@ -33,7 +33,6 @@
           </tr>
         </tbody>
       </table>
-        <ModalConfirmacao :user="selectedUser" v-if="showModal" @confirm="remove" @cancel="showModal=false"/>
     </div>
   </div>
 </template>

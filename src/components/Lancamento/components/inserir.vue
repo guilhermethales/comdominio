@@ -18,16 +18,21 @@ export default {
     save () {
       this.$store.dispatch('newLancamento', this.lancamento)
       .then(() => {
+        setTimeout(() => {
           this.$store.dispatch('getUltimoLancamento')
-          // this.$router.push('/admin/lancamento')
+        }, 1000)
       })
       .then(() => {
         setTimeout(() =>{
           const listaItens = this.$store.state.lancamento.itensLancamento
+          console.log(listaItens)
           listaItens.map((item) => {
             item.lancamento = { id: this.$store.state.lancamento.lancamentoView.id }
-              this.$store.dispatch('saveItensLancamento', item)
           })
+          console.log(listaItens)
+          setTimeout(() => {
+            this.$store.dispatch('saveItensLancamento', listaItens)
+          }, 2000)
           this.$router.push('/admin/lancamento')
         },2000)
       })

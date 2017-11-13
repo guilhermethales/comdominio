@@ -12,7 +12,7 @@
               <h1 class="main-title">Lançamento {{ lancamento.descricao }}</h1>
               <p>ID: {{ lancamento.id }}</p>
               <p>Descrição: {{ lancamento.descricao }}</p>
-              <p><strong>Valor Total:{{ lancamento.valortotal }}</strong></p>
+              <p><strong>Valor Total: R${{ lancamento.valortotal }}</strong></p>
               <p>Tipo de Lançamento: {{ lancamento.tipoLancamento.descricao }}</p>
                 <a :href="`#/lancamento/editar/${lancamento.id}`" class="btn btn-primary" style="margin:0 5px;">Editar Lançamento</a>
                 <a href="" class="btn btn-danger" @click.prevent="confirmDelete(lancamento.id)">Excluir</a>
@@ -29,6 +29,27 @@
             <h4 class="title">Itens do Lançamento {{ lancamento.id }}</h4>
 
           </div>
+          <div class="content">
+            <table class="table table-responsive table-full-width">
+              <thead>
+                <tr>
+                  <th>Id Item</th>
+                  <th>Descrição</th>
+                  <th>Valor Unitário</th>
+                  <th>Qtd</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="item in itensLancamento">
+                  <td>{{ item.id }}</td>
+                  <td>{{ item.descricao }}</td>
+                  <td>R${{ item.valorUnit }}</td>
+                  <td>{{ item.quantidade }}</td>
+                  <td><a :href="`#/lancamento/list/${lancamento.id}`" class="btn btn-sm btn-primary btn-small">Editar</a><a href="" @click.prevent="confirmDelete(item.id)" class="btn btn-sm btn-danger btn-small" style="margin:0 5px;">Excluir</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -43,7 +64,10 @@ import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
     name: 'VisualizarLancamento',
     props: ['showModal'],
     created() {
-      return this.$store.dispatch('getLancamento', this.$route.params.id);
+      return this.$store.dispatch('getLancamento', this.$route.params.id)
+    },
+    mounted () {
+      return this.$store.dispatch('getItensLancamento', this.$route.params.id)
     },
     components: {
       ModalConfirmacao
@@ -51,7 +75,6 @@ import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
     data () {
       return {
         lancamentoSelecionado: null,
-        showModal: false
       }
     },
     methods: {
@@ -68,7 +91,10 @@ import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
     },
     computed: {
       lancamento() {
-        return this.$store.state.lancamento.lancamentoView;
+        return this.$store.state.lancamento.lancamentoView
+      },
+      itensLancamento () {
+        return this.$store.state.lancamento.itensLancamento
       }
     }
   }

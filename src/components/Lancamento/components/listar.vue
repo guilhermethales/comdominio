@@ -27,7 +27,7 @@
           <tr v-for="lancamento in lista">
             <td>{{ lancamento.id }}</td>
             <td>{{ lancamento.descricao }}</td>
-            <td>{{ lancamento.valortotal }}</td>
+            <td>R${{ lancamento.valortotal }}</td>
             <td>{{ lancamento.tipoLancamento.descricao }}</td>
             <td><a :href="`#/lancamento/list/${lancamento.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/lancamento/editar/${lancamento.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr>
@@ -57,10 +57,10 @@ import _ from 'lodash';
       tableClass () {
         return `table-${this.type}`
       },
-      lancamentos() {
+      lancamentos () {
         return this.$store.state.lancamento.lancamentosList;
       },
-      lista() {
+      lista () {
         const filter = this.configs.filter;
         const list = _.orderBy(this.lancamentos, this.configs.orderBy, this.configs.order);
 

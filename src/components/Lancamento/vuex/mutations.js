@@ -4,5 +4,8 @@ export default {
   },
   updateLancamentoView (state, data) {
     state.lancamentoView = data
+  },
+  updateItensLancamento (state, data) {
+    state.itensLancamento = data
   }
 }
