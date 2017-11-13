@@ -38,12 +38,7 @@ export default {
       return `table-${this.type}`
     },
     ultimosLancamentos() {
-      const ultimosLancamentos = this.$store.state.ultimosLancamentos.ultimosLancamentos
-      const obj = []
-      for(let i = 0; i < 5; i++) {
-        obj.push(ultimosLancamentos[i])
-      }
-      return obj
+      return this.$store.state.ultimosLancamentos.ultimosLancamentos
     }
   }
 }
