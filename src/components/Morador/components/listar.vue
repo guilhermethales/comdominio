@@ -7,7 +7,7 @@
             <input type="text" v-model="configs.filter" class="form-control border-input" placeholder="Pesquise pelo nome do morador">
           </div>
           <div class="col col-md-3">
-            <a href="/#/morador/novo" class="btn btn-warning">Novo Morador</a>
+            <a href="#/morador/novo" class="btn btn-warning">Novo Morador</a>
           </div>
         </div>
       </slot>
