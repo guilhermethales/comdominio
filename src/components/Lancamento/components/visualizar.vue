@@ -2,6 +2,7 @@
   <div>
     <div class="header">
       <h1 class="title__item">Detalhes do Lançamento</h1>
+      <ModalAction v-if="confirmModal"/>
     </div>
 
     <div class="row">
@@ -45,7 +46,6 @@
                   <td>{{ item.descricao }}</td>
                   <td>R${{ item.valorUnit }}</td>
                   <td>{{ item.quantidade }}</td>
-                  <td><a :href="`#/lancamento/list/${lancamento.id}`" class="btn btn-sm btn-primary btn-small">Editar</a><a href="" @click.prevent="confirmDelete(item.id)" class="btn btn-sm btn-danger btn-small" style="margin:0 5px;">Excluir</a></td>
                 </tr>
               </tbody>
             </table>
@@ -58,7 +58,9 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
+import ModalAction from 'components/UIComponents/ModalAction'
 
   export default {
     name: 'VisualizarLancamento',
@@ -70,7 +72,8 @@ import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
       return this.$store.dispatch('getItensLancamento', this.$route.params.id)
     },
     components: {
-      ModalConfirmacao
+      ModalConfirmacao,
+      ModalAction
     },
     data () {
       return {
@@ -90,6 +93,9 @@ import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
       }
     },
     computed: {
+      ...mapGetters([
+      	'confirmModal'
+    	]),
       lancamento() {
         return this.$store.state.lancamento.lancamentoView
       },

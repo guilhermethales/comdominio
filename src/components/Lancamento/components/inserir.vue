@@ -1,5 +1,6 @@
 <script>
 import http from 'src/http';
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'InserirLancamento',
@@ -8,10 +9,10 @@ export default {
     return {
       sub_title: 'Cadastrar Lançamento',
       lancamento: {
-        valortotal: `R$ ${this.calcularValorTotal()}`,
-        tipoLancamento: { id:79 }
+        tipoLancamento: { id:79 },
+        valortotal: 0
       },
-      itemLancamento: {}
+      fieldsItem: {}
     }
   },
   methods: {
@@ -25,20 +26,19 @@ export default {
       .then(() => {
         setTimeout(() =>{
           const listaItens = this.$store.state.lancamento.itensLancamento
-          console.log(listaItens)
           listaItens.map((item) => {
             item.lancamento = { id: this.$store.state.lancamento.lancamentoView.id }
           })
-          console.log(listaItens)
           setTimeout(() => {
             this.$store.dispatch('saveItensLancamento', listaItens)
           }, 2000)
           this.$router.push('/admin/lancamento')
+          this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Lançamento inserido com sucesso!!!'})
         },2000)
       })
     },
     saveItem () {
-      const item = this.itemLancamento
+      const item = this.fieldsItem
       const obj = { descricao: item.descricao, valorUnit: item.valorUnit, quantidade: item.quantidade }
       item.descricao = ""
       item.valorUnit = ""
@@ -60,7 +60,7 @@ export default {
       return this.$store.state.lancamento.itensLancamento
     },
     calcularTotal () {
-      return this.lancamento.valortotal = this.calcularValorTotal();
+      return this.lancamento.valortotal = this.calcularValorTotal()
     }
   }
 

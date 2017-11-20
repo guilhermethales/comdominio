@@ -6,5 +6,8 @@ export default {
     .then((response) => {
       context.commit('updateUltimosLancamentos', response.data)
     })
+  },
+  getUpdateConfirmModal (context, data) {
+    context.commit('updateConfirmModal', data)
   }
 }

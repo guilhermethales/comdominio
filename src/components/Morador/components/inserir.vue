@@ -15,12 +15,12 @@ export default {
       this.$store.dispatch('newMorador', this.morador)
       .then(() => {
         setTimeout(() => {
+          this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Morador inserido com sucesso!!!'})
           this.$router.push('/admin/morador')
         }, 500);
       })
     }
-  }
-
+  },
 }
 </script>
 

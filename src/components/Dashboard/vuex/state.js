@@ -1,3 +1,4 @@
 export default {
-  ultimosLancamentos: []
+  ultimosLancamentos: [],
+  confirmModal: { show: false, message: '' }
 }

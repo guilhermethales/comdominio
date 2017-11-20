@@ -12,6 +12,12 @@ export default {
     .then((response) => {
       context.commit('updateLancamentoView', response.data)
     })
+    .then(() => {
+      http.get(`itemlancamento/lancamento/${id}`)
+      .then((xobi) => {
+        context.commit('updateItensLancamento', xobi.data)
+      })
+    })
   },
   newLancamento (context, data) {
     http.post('lancamento/post', data)
@@ -31,10 +37,10 @@ export default {
   saveItensLancamento (context, data) {
     http.post('itemlancamento/postmany', data)
   },
-  getItensLancamento (context, idLancamento) {
-    http.get(`itemlancamento/lancamento/${idLancamento}`)
-    .then((response) => {
-      context.commit('updateItensLancamento', response.data)
-    })
+  updateItensLancamento (context, data) {
+    http.put('itemlancamento/put', data)
+  },
+  removeItemLancamento (context, idItem) {
+    http.delete(`itemlancamento/delete/${idItem}`)
   }
 }

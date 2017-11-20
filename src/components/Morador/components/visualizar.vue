@@ -2,6 +2,7 @@
   <div>
     <div class="header">
       <h1 class="title__item">Informações do Morador</h1>
+			<ModalAction v-if="confirmModal"/>
     </div>
 
     <div class="main">
@@ -29,7 +30,9 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
+import ModalAction from 'components/UIComponents/ModalAction'
 
   export default {
     name: 'VisualizarMorador',
@@ -37,7 +40,8 @@ import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
       return this.$store.dispatch('getMorador', this.$route.params.id)
     },
     components: {
-      ModalConfirmacao
+      ModalConfirmacao,
+			ModalAction
     },
     data () {
       return {
@@ -58,6 +62,9 @@ import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
       }
     },
     computed: {
+			...mapGetters([
+      	'confirmModal'
+    	]),
       morador () {
         return this.$store.state.morador.moradorView
       }

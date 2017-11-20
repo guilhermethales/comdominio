@@ -5,22 +5,40 @@ export default {
   data() {
     return {
       sub_title: 'Edição de Lançamento',
-      itemLancamento: {}
+      fieldsItem: {},
     }
   },
   created() {
-    return this.$store.dispatch('getLancamento', this.$route.params.id);
+    return this.$store.dispatch('getLancamento', this.$route.params.id)
   },
   methods: {
-    save() {
+    save () {
       this.$store.dispatch('updateLancamento', this.lancamento)
       .then(() => {
-        this.$router.push(`/lancamento/list/${this.lancamento.id}`);
-      });
+        setTimeout(() => {
+          this.$store.dispatch('getUltimoLancamento')
+        }, 1000)
+      })
+      .then(() => {
+        setTimeout(() =>{
+          const listaItens = this.$store.state.lancamento.itensLancamento
+          listaItens.map((item) => {
+            item.lancamento = { id: this.$store.state.lancamento.lancamentoView.id }
+          })
+          setTimeout(() => {
+            this.$store.dispatch('saveItensLancamento', listaItens)
+          }, 2000)
+          this.$router.push(`/lancamento/list/${this.lancamento.id}`)
+          this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Lançamento atualizado com sucesso!!!'})
+        },2000)
+      })
     },
     saveItem () {
-      const item = this.itemLancamento
+      const item = this.fieldsItem
       const obj = { descricao: item.descricao, valorUnit: item.valorUnit, quantidade: item.quantidade }
+      item.descricao = ""
+      item.valorUnit = ""
+      item.quantidade = ""
       return this.$store.state.lancamento.itensLancamento.push(obj)
     },
     calcularValorTotal () {
@@ -31,17 +49,21 @@ export default {
         totalGeral = totalGeral + totalItem
       })
       return totalGeral
+    },
+    remove (idItem) {
+      this.$store.dispatch('removeItemLancamento', idItem)
+      .then(() => this.lancamento)
     }
   },
   computed: {
-    lancamento() {
-      return this.$store.state.lancamento.lancamentoView;
+    lancamento () {
+      return this.$store.state.lancamento.lancamentoView
     },
     itensLancamento () {
       return this.$store.state.lancamento.itensLancamento
     },
     calcularTotal() {
-      return this.lancamento.valortotal = this.calcularValorTotal();
+      return this.lancamento.valortotal = this.calcularValorTotal()
     }
   }
 }

@@ -11,9 +11,10 @@ export default {
     return this.$store.dispatch('getMorador', this.$route.params.id)
   },
   methods: {
-    async save () {
-      await this.$store.dispatch('updateMorador', this.morador)
-      await this.$router.push(`/morador/list/${this.morador.id}`)
+    save () {
+      this.$store.dispatch('updateMorador', this.morador)
+      this.$router.push(`/morador/list/${this.morador.id}`)
+			this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Morador atualizado com sucesso!!!'})
     }
   },
   computed: {

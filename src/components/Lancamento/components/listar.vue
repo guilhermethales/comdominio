@@ -11,6 +11,7 @@
           </div>
         </div>
       </slot>
+      <ModalAction v-if="confirmModal"/>
     </div>
     <div class="content table-responsive table-full-width">
       <table class="table" :class="tableClass">
@@ -38,7 +39,9 @@
 </template>
 
 <script>
-import _ from 'lodash';
+import _ from 'lodash'
+import { mapGetters } from 'vuex'
+import ModalAction from 'components/UIComponents/ModalAction'
 
   export default {
     data(){
@@ -50,10 +53,16 @@ import _ from 'lodash';
         }
       };
     },
+    components: {
+      ModalAction
+    },
     mounted () {
       this.$store.dispatch('getLancamentos');
     },
     computed: {
+      ...mapGetters([
+        'confirmModal'
+      ]),
       tableClass () {
         return `table-${this.type}`
       },

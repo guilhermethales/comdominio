@@ -11,6 +11,7 @@
           </div>
         </div>
       </slot>
+      <ModalAction v-if="confirmModal"/>
     </div>
     <div class="content table-responsive table-full-width">
       <table class="table" :class="tableClass">
@@ -39,6 +40,8 @@
 
 <script>
 import _ from 'lodash'
+import { mapGetters } from 'vuex'
+import ModalAction from 'components/UIComponents/ModalAction'
 
 export default {
   data () {
@@ -50,10 +53,16 @@ export default {
       }
     }
   },
+  components: {
+    ModalAction
+  },
   mounted () {
     this.$store.dispatch('getMoradores')
   },
   computed: {
+    ...mapGetters([
+      'confirmModal'
+    ]),
     tableClass () {
       return `table-${this.type}`
     },
