@@ -28,7 +28,7 @@ export default {
           setTimeout(() => {
             this.$store.dispatch('saveItensLancamento', listaItens)
           }, 2000)
-          this.$router.push(`/lancamento/list/${this.lancamento.id}`)
+          this.$router.push(`/lancamento/list/${this.$route.params.id}`)
           this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Lançamento atualizado com sucesso!!!'})
         },2000)
       })
@@ -52,7 +52,7 @@ export default {
     },
     remove (idItem) {
       this.$store.dispatch('removeItemLancamento', idItem)
-      .then(() => this.lancamento)
+      .then(() =>  this.$store.dispatch('getItensLancamento', this.$route.params.id))
     }
   },
   computed: {

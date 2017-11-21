@@ -13,12 +13,11 @@ export default {
   methods: {
     save () {
       this.$store.dispatch('newMorador', this.morador)
-      .then(() => {
-        setTimeout(() => {
+        .then(() => {
           this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Morador inserido com sucesso!!!'})
           this.$router.push('/admin/morador')
-        }, 500);
-      })
+          this.$store.dispatch('getMoradores')
+        })
     }
   },
 }

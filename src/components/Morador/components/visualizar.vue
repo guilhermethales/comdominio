@@ -25,7 +25,7 @@
           <a href="#/admin/morador" class="btn-voltar">Voltar</a>
       </div>
     </div>
-    <ModalConfirmacao :user="selectedUser" v-if="showModal" @confirm="remove" @cancel="showModal=false"/>
+    <ModalConfirmacao :user="moradorSelecionado" v-if="showModal" @confirm="remove" @cancel="showModal=false"/>
   </div>
 </template>
 
@@ -57,8 +57,12 @@ import ModalAction from 'components/UIComponents/ModalAction'
       remove () {
         this.showModal = false
         this.$store.dispatch('removeMorador', this.moradorSelecionado)
-        this.$router.push('/admin/morador')
-        this.moradorSelecionado = null
+          .then(() => {
+            this.$router.push('/admin/morador')
+            this.moradorSelecionado = null
+            this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Morador excluído com sucesso!!!'})
+            this.$store.dispatch('getMoradores')
+          })
       }
     },
     computed: {
