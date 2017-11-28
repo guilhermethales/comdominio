@@ -1,0 +1,45 @@
+<div>
+  <div class="card">
+    <div class="header">
+      <h4 class="title">{{ sub_title }}</h4>
+    </div>
+
+    <div class="content">
+      <form @submit.prevent="save">
+        <div class="row">
+          <div class="form-group col col-md-6">
+            <label for="email">Nome:</label>
+            <input v-model="bloco.nome" type="text" class="form-control border-input" id="nome" required>
+          </div>
+          <div class="form-group col col-md-6">
+              <label for="email">Email:</label>
+              <input v-model="bloco.email" type="email" class="form-control border-input" id="email">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col col-md-2">
+            <label for="pwd">CPF:</label>
+            <input v-model="bloco.cpfcnpj" type="text" class="form-control border-input" id="cpfcnpj">
+          </div>
+          <div class="form-group col col-md-2">
+            <label for="pwd">Telefone:</label>
+            <input v-model="bloco.telefone" type="text" class="form-control border-input" id="telefone">
+          </div>
+          <div class="form-group col col-md-4">
+            <label for="pwd">Login:</label>
+            <input v-model="bloco.login" type="text" class="form-control border-input" id="login" required>
+          </div>
+          <div class="form-group col col-md-4">
+            <label for="pwd">Senha:</label>
+            <input v-model="bloco.senha" type="password" class="form-control border-input" id="senha" required>
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit" class="btn btn-success btn-salvar">Salvar</button>
+        </div>
+      </form>
+    </div>
+    <hr>
+    <a href="#/admin/bloco" class="btn-voltar">Voltar</a>
+  </div>
+</div>

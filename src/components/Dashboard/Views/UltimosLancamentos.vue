@@ -30,7 +30,7 @@
 <script>
 export default {
   name: 'UltimosLancamentos',
-  created () {
+  mounted () {
     this.$store.dispatch('getUltimosLancamentos')
   },
   computed: {

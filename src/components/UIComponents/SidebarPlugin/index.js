@@ -21,7 +21,7 @@ const SidebarStore = {
     {
       name: 'Blocos',
       icon: 'ti-home',
-      path: '/admin/stats'
+      path: '/admin/bloco'
     },
     {
       name: 'Estacionamento',

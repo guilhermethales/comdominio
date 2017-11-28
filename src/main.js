@@ -1,4 +1,7 @@
 import Vue from 'vue'
+import VeeValidate, { Validator } from 'vee-validate'
+import CpfValidator from './components/validators/cpf.validator'
+import Dictionary from './components/validators/dictionary'
 import router from './router'
 import store from './vuex'
 
@@ -12,7 +15,10 @@ import App from './App'
 // library imports
 import Chartist from 'chartist'
 
+Validator.extend('cpf', CpfValidator)
+
 // plugin setup
+Vue.use(VeeValidate,  {locale: 'pt', dictionary: Dictionary})
 Vue.use(GlobalComponents)
 Vue.use(GlobalDirectives)
 Vue.use(Notifications)

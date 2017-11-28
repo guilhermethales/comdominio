@@ -7,7 +7,7 @@ export default {
       sub_title: 'Edição de Morador'
     }
   },
-  created () {
+  mounted () {
     return this.$store.dispatch('getMorador', this.$route.params.id)
   },
   methods: {

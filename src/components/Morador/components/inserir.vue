@@ -18,6 +18,14 @@ export default {
           this.$router.push('/admin/morador')
           this.$store.dispatch('getMoradores')
         })
+    },
+		validateBeforeSubmit() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          return this.save();
+        }
+      });
     }
   },
 }

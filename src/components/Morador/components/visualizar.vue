@@ -36,7 +36,7 @@ import ModalAction from 'components/UIComponents/ModalAction'
 
   export default {
     name: 'VisualizarMorador',
-    created () {
+    mounted () {
       return this.$store.dispatch('getMorador', this.$route.params.id)
     },
     components: {

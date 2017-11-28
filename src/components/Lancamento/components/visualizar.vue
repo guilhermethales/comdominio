@@ -65,11 +65,9 @@ import ModalAction from 'components/UIComponents/ModalAction'
   export default {
     name: 'VisualizarLancamento',
     props: ['showModal'],
-    created() {
-      return this.$store.dispatch('getLancamento', this.$route.params.id)
-    },
     mounted () {
-      return this.$store.dispatch('getItensLancamento', this.$route.params.id)
+      this.$store.dispatch('getLancamento', this.$route.params.id)
+      this.$store.dispatch('getItensLancamento', this.$route.params.id)
     },
     components: {
       ModalConfirmacao,

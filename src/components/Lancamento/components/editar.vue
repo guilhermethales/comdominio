@@ -8,7 +8,7 @@ export default {
       fieldsItem: {},
     }
   },
-  created() {
+  mounted() {
     return this.$store.dispatch('getLancamento', this.$route.params.id)
   },
   methods: {
