@@ -20,28 +20,38 @@ const SidebarStore = {
     },
     {
       name: 'Blocos',
-      icon: 'ti-home',
+      icon: 'ti-package',
       path: '/admin/bloco'
     },
     {
-      name: 'Estacionamento',
-      icon: 'ti-car',
-      path: '/admin/typography'
-    },
-    {
-      name: 'Funcionários',
-      icon: 'ti-star',
-      path: '/admin/icons'
-    },
-    {
-      name: 'Notificações',
-      icon: 'ti-bell',
-      path: '/admin/notifications'
+      name: 'Apartamento',
+      icon: 'ti-home',
+      path: '/admin/apartamento'
     },
     {
       name: 'Lazer',
       icon: 'ti-basketball',
-      path: '/admin/maps'
+      path: '/admin/lazer'
+    },
+    {
+      name: 'Agendamento',
+      icon: 'ti-calendar',
+      path: '/admin/agendamento'
+    },
+    {
+      name: 'Solicitação',
+      icon: 'ti-check-box',
+      path: '/admin/solicitacao'
+    },
+    {
+      name: 'Notificação',
+      icon: 'ti-bell',
+      path: '/admin/notificacao'
+    },
+    {
+      name: 'Mensagem',
+      icon: 'ti-comments',
+      path: '/admin/mensagem'
     }
   ],
   displaySidebar (value) {

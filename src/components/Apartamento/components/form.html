@@ -1,0 +1,39 @@
+<div>
+  <div class="card">
+    <div class="header">
+      <h4 class="title">{{ sub_title }}</h4>
+    </div>
+
+    <div class="content">
+      <form @submit.prevent="validateBeforeSubmit">
+        <div class="row">
+          <div class="form-group col col-md-6">
+            <label for="email">Descrição:</label>
+            <input name="nome" v-model="apartamento.descricao" type="text" v-validate="'required'" class="form-control border-input" id="nome">
+            <span class="alert-error" v-show="errors.has('nome')">{{ errors.first('nome') }}</span>
+          </div>
+          <div class="form-group col col-md-6">
+              <label for="email">Resposável:</label>
+              <input v-model="apartamento.pessoaResponsavel.nome" v-validate="'required|email'" type="email" name="email" :class="{'input': true, 'is-danger': errors.has('email') }" class="form-control border-input" id="email">
+              <span class="alert-error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col col-md-6">
+            <label for="pwd">Proprietário:</label>
+            <input v-model="apartamento.pessoaResponsavel.nome" type="text" class="form-control border-input" id="senha">
+          </div>
+          <div class="form-group col col-md-6">
+              <label for="pwd">Tipo Unidade:</label>
+              <input v-model="apartamento.pessoaProprietario.nome" type="text" class="form-control border-input" id="senha">
+            </div>
+        </div>
+        <div class="row">
+          <button type="submit" class="btn btn-success btn-salvar">Salvar</button>
+        </div>
+      </form>
+    </div>
+    <hr>
+    <a href="#/admin/apartamento" class="btn-voltar">Voltar</a>
+  </div>
+</div>

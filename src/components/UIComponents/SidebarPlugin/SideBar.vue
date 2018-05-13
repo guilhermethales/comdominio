@@ -13,7 +13,7 @@
             <div class="logo-img">
                 <img src="static/img/logo.png" alt="Logo Comdomínio">
             </div>
-          ComDominio
+          Síndico - ComDominio
         </a>
       </div>
       <slot>

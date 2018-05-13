@@ -1,0 +1,86 @@
+<template>
+  <div>
+    <div class="header">
+      <h1 class="title__item">Informações do apartamento</h1>
+			<ModalAction v-if="confirmModal"/>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col col-md-12">
+          <h1 class="main-title">Apartamento {{ apartamento.descricao }}</h1>
+
+          <p>Descrição: {{apartamento.descricao }}</p>
+          <p>Proprietário: {{apartamento.pessoaProprietario.nome}}</p>
+          <p>Responsável: {{apartamento.pessoaResponsavel.nome }}</p>
+          <p>Tipo Unidade : {{apartamento.tipoUnidade.descricao}}</p>
+
+            <a :href="`#/apartamento/editar/${apartamento.id}`" class="btn btn-primary" style="margin:0 5px;">Editar</a>
+            <a href="" class="btn btn-danger" @click.prevent="confirmDelete(apartamento.id)">Excluir</a>
+          </div>
+        </div>
+        <hr>
+          <a href="#/admin/apartamento" class="btn-voltar">Voltar</a>
+      </div>
+    </div>
+    <ModalConfirmacao :user="apartamentoSelecionado" v-if="showModal" @confirm="remove" @cancel="showModal=false"/>
+  </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+import ModalConfirmacao from 'components/UIComponents/ModalConfirmacao'
+import ModalAction from 'components/UIComponents/ModalAction'
+
+  export default {
+    name: 'VisualizarApartamento',
+    mounted () {
+      return this.$store.dispatch('getApartamento', this.$route.params.id)
+    },
+    components: {
+      ModalConfirmacao,
+			ModalAction
+    },
+    data () {
+      return {
+        apartamentoSelecionado: null,
+        showModal: false
+      }
+    },
+    methods: {
+      confirmDelete(id) {
+        this.apartamentoSelecionado = id
+        this.showModal = true
+      },
+      remove () {
+        this.showModal = false
+        this.$store.dispatch('removeApartamento', this.apartamentoSelecionado)
+          .then(() => {
+            this.$router.push('/admin/apartamento')
+            this.apartamentoSelecionado = null
+            this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'apartamento excluído com sucesso!!!'})
+            this.$store.dispatch('getApartamento')
+          })
+      }
+    },
+    computed: {
+			...mapGetters([
+      	'confirmModal'
+    	]),
+      apartamento () {
+        return this.$store.state.apartamento.apartamentoView
+      }
+    }
+  }
+</script>
+
+<style lang="scss">
+  .main {
+    background-color: #fff;
+  }
+
+  .main-title {
+    font-size: 20px;
+  }
+</style>

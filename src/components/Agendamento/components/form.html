@@ -1,0 +1,51 @@
+<div>
+  <div class="card">
+    <div class="header">
+      <h4 class="title">{{ sub_title }}</h4>
+    </div>
+
+    <div class="content">
+      <form @submit.prevent="validateBeforeSubmit">
+        <div class="row">
+          <div class="form-group col col-md-6">
+            <label for="email">inicio:</label>
+            <input name="nome" v-model="agendamento.nome" type="text" v-validate="'required'" class="form-control border-input" id="nome">
+            <span class="alert-error" v-show="errors.has('nome')">{{ errors.first('nome') }}</span>
+          </div>
+          <div class="form-group col col-md-6">
+              <label for="email">fim:</label>
+              <input v-model="agendamento.email" v-validate="'required|email'" type="email" name="email" :class="{'input': true, 'is-danger': errors.has('email') }" class="form-control border-input" id="email">
+              <span class="alert-error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col col-md-2">
+            <label for="pwd">evento:</label>
+            <input v-model="agendamento.cpfcnpj" type="text" class="form-control border-input" id="cpfcnpj">
+          </div>
+          <div class="form-group col col-md-2">
+            <label for="pwd">aprovacao:</label>
+            <input v-model="agendamento.telefone" type="text" class="form-control border-input" id="telefone">
+          </div>
+          <div class="form-group col col-md-4">
+            <label for="pwd">dataaprovacao:</label>
+            <input v-model="agendamento.login" type="text" class="form-control border-input" id="login">
+          </div>
+          <div class="form-group col col-md-4">
+            <label for="pwd">areaDeLazer:</label>
+            <input v-model="agendamento.senha" type="text" class="form-control border-input" id="senha">
+          </div>
+          <div class="form-group col col-md-4">
+            <label for="pwd">Condominio:</label>
+            <input v-model="agendamento.senha" type="text" class="form-control border-input" id="senha">
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit" class="btn btn-success btn-salvar">Salvar</button>
+        </div>
+      </form>
+    </div>
+    <hr>
+    <a href="#/admin/agendamento" class="btn-voltar">Voltar</a>
+  </div>
+</div>
