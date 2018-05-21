@@ -17,20 +17,53 @@
       <table class="table" :class="tableClass">
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Email</th>
+            <th>Inicio</th>
+            <th>Fim</th>
+            <th>Evento</th>
+            <th>Area</th>
+            <th>Pessoa</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="solicitacao in solicitacao">
+          <!-- <tr v-for="solicitacao in solicitacao">
             <td>{{ solicitacao.nome }}</td>
             <td>{{ solicitacao.cpfcnpj }}</td>
             <td>{{ solicitacao.telefone }}</td>
             <td>{{ solicitacao.email }}</td>
             <td><a :href="`#/solicitacao/list/${solicitacao.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/solicitacao/editar/${solicitacao.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr> -->
+          <tr>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><input type="checkbox"></td>
+          </tr>
+           <tr>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><input type="checkbox"></td>
+          </tr>
+           <tr>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><input type="checkbox"></td>
+          </tr>
+           <tr>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><input type="checkbox"></td>
           </tr>
         </tbody>
       </table>

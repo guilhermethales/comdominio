@@ -25,7 +25,7 @@
           <a href="#/admin/bloco" class="btn-voltar">Voltar</a>
       </div>
     </div>
-    <ModalConfirmacao :user="blocoSelecionado" v-if="showModal" @confirm="remove" @cancel="showModal=false"/>
+    <ModalConfirmacao :user="BlocoSelecionado" v-if="showModal" @confirm="remove" @cancel="showModal=false"/>
   </div>
 </template>
 

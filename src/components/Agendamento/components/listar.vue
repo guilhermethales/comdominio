@@ -33,6 +33,54 @@
             <td>{{ agendamento.areaDeLazer.descricao}}</td>
             <td><a :href="`#/agendamento/list/${agendamento.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/agendamento/editar/${agendamento.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr>
+          <tr>
+            <td>Festa</td>
+            <td>Salão</td>
+            <td>04/07/2018</td>
+            <td>04/07/2018</td>
+            <td>Sim</td>
+             <td><a :href="`#/agendamento/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/agendamento/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>Festa</td>
+            <td>Salão</td>
+            <td>04/07/2018</td>
+            <td>04/07/2018</td>
+            <td>Sim</td>
+             <td><a :href="`#/agendamento/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/agendamento/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>Festa</td>
+            <td>Salão</td>
+            <td>04/07/2018</td>
+            <td>04/07/2018</td>
+            <td>Sim</td>
+             <td><a :href="`#/agendamento/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/agendamento/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>Festa</td>
+            <td>Salão</td>
+            <td>04/07/2018</td>
+            <td>04/07/2018</td>
+            <td>Sim</td>
+             <td><a :href="`#/agendamento/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/agendamento/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>Festa</td>
+            <td>Salão</td>
+            <td>04/07/2018</td>
+            <td>04/07/2018</td>
+            <td>Sim</td>
+             <td><a :href="`#/agendamento/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/agendamento/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>Festa</td>
+            <td>Salão</td>
+            <td>04/07/2018</td>
+            <td>04/07/2018</td>
+            <td>Sim</td>
+             <td><a :href="`#/agendamento/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/agendamento/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
         </tbody>
       </table>
     </div>

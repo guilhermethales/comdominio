@@ -21,6 +21,30 @@
             <td>{{ lancamento.valortotal }}</td>
             <td><a :href="`#/lancamento/list/${lancamento.id}`" class="btn btn-sm btn-default btn-small">Visualizar</a><a :href="`#/lancamento/editar/${lancamento.id}`" class="btn btn-sm btn-primary btn-small" style="margin:0 5px;">Editar</a></td>
           </tr>
+          <tr>
+            <td>2</td>
+            <td>Manutenção Extintores</td>
+            <td>600</td>
+            <td><a :href="`#/lancamento/list/${1}`" class="btn btn-sm btn-default btn-small">Visualizar</a><a :href="`#/lancamento/editar/${1}`" class="btn btn-sm btn-primary btn-small" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Manutenção Extintores</td>
+            <td>600</td>
+            <td><a :href="`#/lancamento/list/${1}`" class="btn btn-sm btn-default btn-small">Visualizar</a><a :href="`#/lancamento/editar/${1}`" class="btn btn-sm btn-primary btn-small" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Manutenção Extintores</td>
+            <td>600</td>
+            <td><a :href="`#/lancamento/list/${1}`" class="btn btn-sm btn-default btn-small">Visualizar</a><a :href="`#/lancamento/editar/${1}`" class="btn btn-sm btn-primary btn-small" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Manutenção Extintores</td>
+            <td>600</td>
+            <td><a :href="`#/lancamento/list/${1}`" class="btn btn-sm btn-default btn-small">Visualizar</a><a :href="`#/lancamento/editar/${1}`" class="btn btn-sm btn-primary btn-small" style="margin:0 5px;">Editar</a></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -48,6 +72,11 @@ export default {
   .header.lancamento {
     background-color: #41b883;
     padding-bottom: 10px !important;
+  }
+
+  .header.lancamento h4 {
+    color: white;
+
   }
 
   .btn-small {

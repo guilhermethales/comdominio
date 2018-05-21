@@ -17,10 +17,9 @@
       <table class="table" :class="tableClass">
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Email</th>
+            <th>Titulo</th>
+            <th>Descrição</th>
+            <th>Data Criação</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -31,6 +30,30 @@
             <td>{{ mensagem.telefone }}</td>
             <td>{{ mensagem.email }}</td>
             <td><a :href="`#/mensagem/list/${mensagem.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/mensagem/editar/${mensagem.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>Lixo</td>
+            <td>Descarte seu lixo corretamente</td>
+            <td>01/01/2018</td>
+            <td><a :href="`#/mensagem/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/mensagem/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>Lixo</td>
+            <td>Descarte seu lixo corretamente</td>
+            <td>01/01/2018</td>
+            <td><a :href="`#/mensagem/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/mensagem/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>Lixo</td>
+            <td>Descarte seu lixo corretamente</td>
+            <td>01/01/2018</td>
+            <td><a :href="`#/mensagem/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/mensagem/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>Lixo</td>
+            <td>Descarte seu lixo corretamente</td>
+            <td>01/01/2018</td>
+            <td><a :href="`#/mensagem/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/mensagem/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr>
         </tbody>
       </table>

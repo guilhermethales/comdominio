@@ -8,5 +8,6 @@ import {routes as agendamento} from './Agendamento'
 import {routes as solicitacao} from './Solicitacao'
 import {routes as notificacao} from './Notificacao'
 import {routes as mensagem} from './Mensagem'
+import {routes as servico} from './Servico'
 
-export default [...dashboard, ...morador, ...lancamento, ...bloco, ...apartamento, ...lazer, ...agendamento, ...solicitacao, ...notificacao, ...mensagem]
+export default [...dashboard, ...morador, ...lancamento, ...bloco, ...apartamento, ...lazer, ...agendamento, ...solicitacao, ...notificacao, ...mensagem, ...servico]

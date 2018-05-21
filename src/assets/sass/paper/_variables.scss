@@ -28,7 +28,8 @@ $light-gray: #E3E3E3 !default;
 $medium-gray: #DDDDDD !default;
 $dark-gray: #9A9A9A !default;
 
-$gray-input-bg: #fffcf5 !default;
+$gray-input-bg: white
+!default;
 $danger-input-bg: #FFC0A4 !default;
 $success-input-bg: #ABF3CB !default;
 $other-medium-gray: #A49E93 !default;
@@ -188,7 +189,7 @@ $green-navbar: rgba(#4CD964, .98);
 $orange-navbar: rgba(#FF9500, .98);
 $red-navbar: rgba(#FF4C40, .98);
 
-$bg-nude: #f4f3ef !default;
+$bg-nude: #F2F1EF !default;
 $bg-primary: #8ECFD5 !default;
 $bg-info: #7CE4FE !default;
 $bg-success: #8EF3C5 !default;

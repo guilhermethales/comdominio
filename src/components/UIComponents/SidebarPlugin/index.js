@@ -19,6 +19,11 @@ const SidebarStore = {
       path: '/admin/lancamento'
     },
     {
+      name: 'Serviço',
+      icon: 'ti-hummer',
+      path: '/admin/servico'
+    },
+    {
       name: 'Blocos',
       icon: 'ti-package',
       path: '/admin/bloco'

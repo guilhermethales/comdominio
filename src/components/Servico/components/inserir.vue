@@ -1,22 +1,22 @@
 <script>
 export default {
-  name: 'InserirBloco',
+  name: 'InserirMorador',
   template: require('./form.html'),
   data () {
     return {
-      sub_title: 'Cadastro de Bloco',
-      bloco: {
+      sub_title: 'Cadastro de Morador',
+      servico: {
         tipoPessoa: { id: 2 }
       }
     }
   },
   methods: {
     save () {
-      this.$store.dispatch('newBloco', this.bloco)
+      this.$store.dispatch('newMorador', this.servico)
         .then(() => {
-          this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Bloco inserido com sucesso!!!'})
-          this.$router.push('/admin/bloco')
-          this.$store.dispatch('getBlocos')
+          this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Morador inserido com sucesso!!!'})
+          this.$router.push('/admin/servico')
+          this.$store.dispatch('getServicos')
         })
     },
 		validateBeforeSubmit() {

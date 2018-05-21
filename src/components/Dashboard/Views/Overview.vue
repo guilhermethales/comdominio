@@ -13,7 +13,7 @@
             {{stats.value}}
           </div>
           <div class="stats" slot="footer">
-            <i :class="stats.footerIcon"></i> {{stats.footerText}}
+            <!-- <i :class="stats.footerIcon"></i>--> {{stats.footerText}}
           </div>
         </stats-card>
       </div>
@@ -22,23 +22,11 @@
     <!--Charts-->
     <div class="row">
 
-      <div class="col col-md-6 col-xs-12">
+      <div class="col col-md-12 col-xs-12">
         <UltimosLancamentos/>
       </div>
 
-      <div class="col col-md-6 col-xs-12">
-        <chart-card :chart-data="preferencesChart.data"  chart-type="Pie">
-          <h4 class="title" slot="title">Estacionamento</h4>
-          <span slot="subTitle"> </span>
-          <span slot="footer">
-            <i class="ti-timer"></i> Campaign set 2 days ago</span>
-          <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Vagas Disponíveis
-            <i class="fa fa-circle text-danger"></i> Vagas Livres
-            <i class="fa fa-circle text-warning"></i> Vagas Ocupadas
-          </div>
-        </chart-card>
-      </div>
+      
     </div>
   </div>
 </template>
@@ -60,7 +48,7 @@
             href: '#/admin/morador',
             icon: 'ti-user',
             title: 'Morador',
-            footerText: 'Updated now',
+            footerText: 'Gerenciar Moradores',
             footerIcon: 'ti-reload'
           },
           {
@@ -68,23 +56,23 @@
             href: '#/admin/lancamento',
             icon: 'ti-money',
             title: 'Lançamento',
-            footerText: 'Last day',
+            footerText: 'Extrato Financeiro',
             footerIcon: 'ti-calendar'
           },
           {
             type: 'danger',
             href: '#/admin/agendamento',
-            icon: 'ti-world',
+            icon: 'ti-calendar',
             title: 'Agendamento',
-            footerText: 'In the last hour',
+            footerText: 'Gerenciar datas',
             footerIcon: 'ti-timer'
           },
           {
             type: 'info',
             href: '#/admin/servico',
-            icon: 'ti-server',
+            icon: 'ti-hummer',
             title: 'Serviço',
-            footerText: 'Updated now',
+            footerText: 'Serviços Terceirizados',
             footerIcon: 'ti-reload'
           }
         ],

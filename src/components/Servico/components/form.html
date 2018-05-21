@@ -9,31 +9,31 @@
         <div class="row">
           <div class="form-group col col-md-6">
             <label for="email">Nome:</label>
-            <input name="nome" v-model="bloco.nome" type="text" v-validate="'required'" class="form-control border-input" id="nome">
+            <input name="nome" v-model="servico.nome" type="text" v-validate="'required'" class="form-control border-input" id="nome">
             <span class="alert-error" v-show="errors.has('nome')">{{ errors.first('nome') }}</span>
           </div>
           <div class="form-group col col-md-6">
               <label for="email">Email:</label>
-              <input v-model="bloco.email" v-validate="'required|email'" type="email" name="email" :class="{'input': true, 'is-danger': errors.has('email') }" class="form-control border-input" id="email">
+              <input v-model="servico.email" v-validate="'required|email'" type="email" name="email" :class="{'input': true, 'is-danger': errors.has('email') }" class="form-control border-input" id="email">
               <span class="alert-error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
           </div>
         </div>
         <div class="row">
           <div class="form-group col col-md-2">
             <label for="pwd">CPF:</label>
-            <input v-model="bloco.cpfcnpj" type="text" class="form-control border-input" id="cpfcnpj">
+            <input v-model="servico.cpfcnpj" type="text" class="form-control border-input" id="cpfcnpj">
           </div>
           <div class="form-group col col-md-2">
             <label for="pwd">Telefone:</label>
-            <input v-model="bloco.telefone" type="text" class="form-control border-input" id="telefone">
+            <input v-model="servico.telefone" type="text" class="form-control border-input" id="telefone">
           </div>
           <div class="form-group col col-md-4">
             <label for="pwd">Login:</label>
-            <input v-model="bloco.login" type="text" class="form-control border-input" id="login">
+            <input v-model="servico.login" type="text" class="form-control border-input" id="login">
           </div>
           <div class="form-group col col-md-4">
             <label for="pwd">Senha:</label>
-            <input v-model="bloco.senha" type="password" class="form-control border-input" id="senha">
+            <input v-model="servico.senha" type="password" class="form-control border-input" id="senha">
           </div>
         </div>
         <div class="row">
@@ -42,6 +42,6 @@
       </form>
     </div>
     <hr>
-    <a href="#/admin/bloco" class="btn-voltar">Voltar</a>
+    <a href="#/admin/servico" class="btn-voltar">Voltar</a>
   </div>
 </div>

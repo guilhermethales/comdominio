@@ -4,10 +4,10 @@
       <slot name="header">
         <div class="row">
           <div class="col col-md-9">
-            <input type="text" v-model="configs.filter" class="form-control border-input" placeholder="Pesquise pelo nome do bloco">
+            <input type="text" v-model="configs.filter" class="form-control border-input" placeholder="Pesquise pelo nome do serviço">
           </div>
           <div class="col col-md-3">
-            <a href="#/bloco/novo" class="btn btn-warning">Novo Bloco</a>
+            <a href="#/servico/novo" class="btn btn-warning">Novo servico</a>
           </div>
         </div>
       </slot>
@@ -25,12 +25,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="bloco in lista">
-            <td>{{ bloco.descricao }}</td>
-            <td>{{ bloco.cpfcnpj }}</td>
-            <td>{{ bloco.telefone }}</td>
-            <td>{{ bloco.email }}</td>
-            <td><a :href="`#/bloco/list/${bloco.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/bloco/editar/${bloco.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          <tr v-for="servico in servico">
+            <td>{{ servico.nome }}</td>
+            <td>{{ servico.cpfcnpj }}</td>
+            <td>{{ servico.telefone }}</td>
+            <td>{{ servico.email }}</td>
+            <td><a :href="`#/servico/list/${servico.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/servico/editar/${servico.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr>
         </tbody>
       </table>
@@ -57,7 +57,7 @@ export default {
     ModalAction
   },
   mounted () {
-    this.$store.dispatch('getBlocos')
+    this.$store.dispatch('getServicos')
   },
   computed: {
     ...mapGetters([
@@ -66,18 +66,18 @@ export default {
     tableClass () {
       return `table-${this.type}`
     },
-    blocos () {
-      return this.$store.state.bloco.blocosList
+    servicos () {
+      return this.$store.state.servico.servicosList
     },
     lista () {
       const filter = this.configs.filter
-      const list = _.orderBy(this.blocos, this.configs.orderBy, this.configs.order)
+      const list = _.orderBy(this.servicos, this.configs.orderBy, this.configs.order)
 
       if (_.isEmpty(filter)) {
         return list
       }
 
-      return _.filter(list, bloco => bloco.nome.indexOf(filter) >= 0)
+      return _.filter(list, servico => servico.nome.indexOf(filter) >= 0)
     }
   }
 }

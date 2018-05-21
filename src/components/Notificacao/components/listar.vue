@@ -17,10 +17,9 @@
       <table class="table" :class="tableClass">
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Email</th>
+            <th>Titulo</th>
+            <th>Descrição</th>
+            <th>Data Criação</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -32,6 +31,31 @@
             <td>{{ notificacao.email }}</td>
             <td><a :href="`#/notificacao/list/${notificacao.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/notificacao/editar/${notificacao.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr>
+          <tr>  
+            <td>Lembrete inadiplentes</td>
+            <td>Lembre-se de pagar as contas</td>
+            <td>30/05/2018</td>
+            <td><a :href="`#/notificacao/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/notificacao/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+           <tr>  
+            <td>Lembrete inadiplentes</td>
+            <td>Lembre-se de pagar as contas</td>
+            <td>30/05/2018</td>
+            <td><a :href="`#/notificacao/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/notificacao/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+           <tr>  
+            <td>Lembrete inadiplentes</td>
+            <td>Lembre-se de pagar as contas</td>
+            <td>30/05/2018</td>
+            <td><a :href="`#/notificacao/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/notificacao/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+           <tr>  
+            <td>Lembrete inadiplentes</td>
+            <td>Lembre-se de pagar as contas</td>
+            <td>30/05/2018</td>
+            <td><a :href="`#/notificacao/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/notificacao/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          
         </tbody>
       </table>
     </div>

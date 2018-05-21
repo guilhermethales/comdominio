@@ -6,5 +6,6 @@ import {vuex as apartamento} from './Apartamento'
 import {vuex as lazer} from './Lazer'
 import {vuex as agendamento} from './Agendamento'
 import {vuex as solicitacao} from './Solicitacao'
+import {vuex as servico} from './Servico'
 
-export default { morador, lancamento, bloco, ultimosLancamentos, apartamento, lazer, agendamento, solicitacao }
+export default { morador, lancamento, bloco, ultimosLancamentos, apartamento, lazer, agendamento, solicitacao, servico }
