@@ -22,17 +22,17 @@ export default [
       },
       {
         path: '/mensagem/novo',
-        name: 'InserirMensagem',
+        name: 'Inserir Mensagem',
         component: inserirMensagem
       },
       {
         path: '/mensagem/editar/:id',
-        name: 'EditarMensagem',
+        name: 'Editar Mensagem',
         component: editarMensagem
       },
       {
         path: '/mensagem/list/:id',
-        name: 'VisualizarMensagem',
+        name: 'Visualizar Mensagem',
         component: visualizarMensagem
       }
     ]

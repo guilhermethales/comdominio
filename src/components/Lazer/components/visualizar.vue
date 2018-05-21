@@ -6,15 +6,13 @@
     </div>
 
     <div class="main">
-      <div class="container">
-        <div class="row">
+      <div >
+        <div class="row" style="padding-left:20px;">
           <div class="col col-md-12">
-          <h1 class="main-title">lazer {{ lazer.nome }}</h1>
+          <h1 class="main-title">Lazer Piscina	</h1>
 
-          <p>Nome: {{ lazer.descricao }}</p>
-          <p>CPF: {{ lazer.area }}</p>
-          <p>Telefone: {{ lazer.tipoArea.descricao }}</p>
-         
+          <p>Descrição Tipo: Piscina Azulejada	</p>
+          <p>Tipo: Piscina </p>
 
             <a :href="`#/lazer/editar/${lazer.id}`" class="btn btn-primary" style="margin:0 5px;">Editar</a>
             <a href="" class="btn btn-danger" @click.prevent="confirmDelete(lazer.id)">Excluir</a>

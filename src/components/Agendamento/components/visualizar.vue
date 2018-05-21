@@ -6,16 +6,18 @@
     </div>
 
     <div class="main">
-      <div class="container">
-        <div class="row">
+      <div >
+        <div class="row" style="padding-left:20px;">
           <div class="col col-md-12">
           <h1 class="main-title">Agendamento {{ agendamento.nome }}</h1>
 
-          <p>Nome: {{ agendamento.evento }}</p>
-          <p>CPF: {{ agendamento.cpfcnpj }}</p>
-          <p>Telefone: {{ agendamento.telefone }}</p>
-          <p>Email: {{ agendamento.email }}</p>
-          <p>Login: {{ agendamento.login }}</p>
+          <p>Inicio: 04/07/2018	</p>
+          <p>Fim: 04/07/2018	</p>
+          <p>Evento: Festa</p>
+          <p>Aprovacao: Sim</p>
+          <p>Data Aprovaçâo: 21/05/2018</p>
+          <p>Area De Lazer: Salão	</p>
+          <p>Condominio: Condominio Serra Verde</p>
 
             <a :href="`#/agendamento/editar/${agendamento.id}`" class="btn btn-primary" style="margin:0 5px;">Editar</a>
             <a href="" class="btn btn-danger" @click.prevent="confirmDelete(agendamento.id)">Excluir</a>

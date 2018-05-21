@@ -6,8 +6,8 @@
     </div>
 
     <div class="main">
-      <div class="container">
-        <div class="row">
+      <div>
+        <div class="row" style="padding-left:20px;">
           <div class="col col-md-12">
           <h1 class="main-title">Morador {{ morador.nome }}</h1>
 

@@ -7,7 +7,7 @@
             <input type="text" v-model="configs.filter" class="form-control border-input" placeholder="Pesquise pelo nome do lançamento">
           </div>
           <div class="col col-md-3">
-            <a href="#/lancamento/novo" class="btn btn-lancamento">Novo Lançamento</a>
+            <a href="#/lancamento/novo" class="btn btn-warning">Novo Lançamento</a>
           </div>
         </div>
       </slot>

@@ -9,23 +9,27 @@
         <div class="row">
           <div class="form-group col col-md-6">
             <label for="email">Descrição:</label>
-            <input name="nome" v-model="apartamento.descricao" type="text" v-validate="'required'" class="form-control border-input" id="nome">
+            <input name="nome" 
+             type="text" v-validate="'required'" class="form-control border-input" id="nome">
             <span class="alert-error" v-show="errors.has('nome')">{{ errors.first('nome') }}</span>
           </div>
           <div class="form-group col col-md-6">
               <label for="email">Resposável:</label>
-              <input v-model="apartamento.pessoaResponsavel.nome" v-validate="'required|email'" type="email" name="email" :class="{'input': true, 'is-danger': errors.has('email') }" class="form-control border-input" id="email">
+              <input 
+               v-validate="'required|email'" type="email" name="email" :class="{'input': true, 'is-danger': errors.has('email') }" class="form-control border-input" id="email">
               <span class="alert-error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
           </div>
         </div>
         <div class="row">
           <div class="form-group col col-md-6">
             <label for="pwd">Proprietário:</label>
-            <input v-model="apartamento.pessoaResponsavel.nome" type="text" class="form-control border-input" id="senha">
+            <input type="text" class="form-control border-input" id="senha">
           </div>
           <div class="form-group col col-md-6">
               <label for="pwd">Tipo Unidade:</label>
-              <input v-model="apartamento.pessoaProprietario.nome" type="text" class="form-control border-input" id="senha">
+              <select class="form-control border-input" id="sel1">
+                  <option>Apartamento</option>
+                </select>
             </div>
         </div>
         <div class="row">

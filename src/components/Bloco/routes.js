@@ -22,17 +22,17 @@ export default [
       },
       {
         path: '/bloco/novo',
-        name: 'InserirBloco',
+        name: 'Inserir Bloco',
         component: inserirBloco
       },
       {
         path: '/bloco/editar/:id',
-        name: 'EditarBloco',
+        name: 'Editar Bloco',
         component: editarBloco
       },
       {
         path: '/bloco/list/:id',
-        name: 'VisualizarBloco',
+        name: 'Visualizar Bloco',
         component: visualizarBloco
       }
     ]

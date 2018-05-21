@@ -5,10 +5,10 @@
       <ModalAction v-if="confirmModal"/>
     </div>
 
-    <div class="row">
+  <div class="row" >
       <div class="col col-md-6">
         <div class="main">
-            <div class="row">
+            <div class="row" style="padding-left:20px;">
               <div class="col col-md-12">
               <h1 class="main-title">Lançamento {{ lancamento.descricao }}</h1>
               <p>ID: {{ lancamento.id }}</p>

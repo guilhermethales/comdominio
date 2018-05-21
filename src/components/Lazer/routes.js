@@ -22,17 +22,17 @@ export default [
       },
       {
         path: '/lazer/novo',
-        name: 'InserirLazer',
+        name: 'Inserir Lazer',
         component: inserirLazer
       },
       {
         path: '/lazer/editar/:id',
-        name: 'EditarLazer',
+        name: 'Editar Lazer',
         component: editarLazer
       },
       {
         path: '/lazer/list/:id',
-        name: 'VisualizarLazer',
+        name: 'Visualizar Lazer',
         component: visualizarLazer
       }
     ]

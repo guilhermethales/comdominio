@@ -1,24 +1,23 @@
 <template>
   <div>
     <div class="header">
-      <h1 class="title__item">Informações do Notificacao</h1>
+      <h1 class="title__item">Informações Notificaçao</h1>
 			<ModalAction v-if="confirmModal"/>
     </div>
 
     <div class="main">
-      <div class="container">
-        <div class="row">
+      <div  >
+        <div class="row" style="padding-left:20px;">
           <div class="col col-md-12">
-          <h1 class="main-title">Notificacao {{ notificacao.nome }}</h1>
+          <h1 class="main-title">Notificacao </h1>
 
-          <p>Nome: {{ notificacao.nome }}</p>
-          <p>CPF: {{ notificacao.cpfcnpj }}</p>
-          <p>Telefone: {{ notificacao.telefone }}</p>
-          <p>Email: {{ notificacao.email }}</p>
-          <p>Login: {{ notificacao.login }}</p>
+          <p>Titulo:Lembrete inadiplentes	</p>
+          <p>Descrição	: Lembre-se de pagar as contas	</p>
+          <p>Data Criação	:30/05/2018	 </p>
+          
 
-            <a :href="`#/notificacao/editar/${notificacao.id}`" class="btn btn-primary" style="margin:0 5px;">Editar</a>
-            <a href="" class="btn btn-danger" @click.prevent="confirmDelete(notificacao.id)">Excluir</a>
+            <a :href="`#/notificacao/editar/${1}`" class="btn btn-primary" style="margin:0 5px;">Editar</a>
+            <a href="" class="btn btn-danger" @click.prevent="confirmDelete(1)">Excluir</a>
           </div>
         </div>
         <hr>

@@ -24,13 +24,6 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="mensagem in mensagem">
-            <td>{{ mensagem.nome }}</td>
-            <td>{{ mensagem.cpfcnpj }}</td>
-            <td>{{ mensagem.telefone }}</td>
-            <td>{{ mensagem.email }}</td>
-            <td><a :href="`#/mensagem/list/${mensagem.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/mensagem/editar/${mensagem.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
-          </tr>
           <tr>
             <td>Lixo</td>
             <td>Descarte seu lixo corretamente</td>

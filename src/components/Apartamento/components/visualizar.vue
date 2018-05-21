@@ -6,15 +6,15 @@
     </div>
 
     <div class="main">
-      <div class="container">
-        <div class="row">
+      <div >
+        <div class="row" style="padding-left:20px;">
           <div class="col col-md-12">
           <h1 class="main-title">Apartamento {{ apartamento.descricao }}</h1>
 
-          <p>Descrição: {{apartamento.descricao }}</p>
-          <p>Proprietário: {{apartamento.pessoaProprietario.nome}}</p>
-          <p>Responsável: {{apartamento.pessoaResponsavel.nome }}</p>
-          <p>Tipo Unidade : {{apartamento.tipoUnidade.descricao}}</p>
+          <p>Descrição: APT0 103	</p>
+          <p>Proprietário: Matheus</p>
+          <p>Responsável: Conceição	</p>
+          <p>Tipo Unidade : Apartamento</p>
 
             <a :href="`#/apartamento/editar/${apartamento.id}`" class="btn btn-primary" style="margin:0 5px;">Editar</a>
             <a href="" class="btn btn-danger" @click.prevent="confirmDelete(apartamento.id)">Excluir</a>

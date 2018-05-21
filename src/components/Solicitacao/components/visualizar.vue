@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="header">
-      <h1 class="title__item">Informações do solicitacao</h1>
+      <h1 class="title__item">Informações Solicitação</h1>
 			<ModalAction v-if="confirmModal"/>
     </div>
 
     <div class="main">
-      <div class="container">
-        <div class="row">
+      <div>
+        <div class="row" style="padding-left:20px;">
           <div class="col col-md-12">
-          <h1 class="main-title">solicitacao {{ solicitacao.nome }}</h1>
+          <h1 class="main-title">solicitação {{ solicitacao.nome }}</h1>
 
           <p>Nome: {{ solicitacao.nome }}</p>
           <p>CPF: {{ solicitacao.cpfcnpj }}</p>

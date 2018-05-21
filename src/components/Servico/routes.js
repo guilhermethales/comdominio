@@ -22,17 +22,17 @@ export default [
       },
       {
         path: '/servico/novo',
-        name: 'InserirServico',
+        name: 'Inserir Servico',
         component: inserirServico
       },
       {
         path: '/servico/editar/:id',
-        name: 'EditarServico',
+        name: 'Editar Servico',
         component: editarServico
       },
       {
         path: '/servico/list/:id',
-        name: 'VisualizarServico',
+        name: 'Visualizar Servico',
         component: visualizarServico
       }
     ]

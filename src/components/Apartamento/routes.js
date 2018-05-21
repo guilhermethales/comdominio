@@ -22,17 +22,17 @@ export default [
       },
       {
         path: '/apartamento/novo',
-        name: 'InserirApartamento',
+        name: 'Inserir Apartamento',
         component: inserirApartamento
       },
       {
         path: '/apartamento/editar/:id',
-        name: 'EditarApartamento',
+        name: 'Editar Apartamento',
         component: editarApartamento
       },
       {
         path: '/apartamento/list/:id',
-        name: 'VisualizarApartamento',
+        name: 'Visualizar Apartamento',
         component: visualizarApartamento
       }
     ]

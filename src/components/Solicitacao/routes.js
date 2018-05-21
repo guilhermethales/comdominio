@@ -22,17 +22,17 @@ export default [
       },
       {
         path: '/solicitacao/novo',
-        name: 'InserirSolicitacao',
+        name: 'Inserir Solicitacao',
         component: inserirSolicitacao
       },
       {
         path: '/solicitacao/editar/:id',
-        name: 'EditarSolicitacao',
+        name: 'Editar Solicitacao',
         component: editarSolicitacao
       },
       {
         path: '/solicitacao/list/:id',
-        name: 'VisualizarSolicitacao',
+        name: 'Visualizar Solicitacao',
         component: visualizarSolicitacao
       }
     ]

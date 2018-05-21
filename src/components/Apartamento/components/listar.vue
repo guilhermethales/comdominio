@@ -24,12 +24,31 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="apartamento in apartamento">
-            <td>{{apartamento.descricao }}</td>
-            <td>{{apartamento.pessoaProprietario.nome}}</td>
-            <td>{{apartamento.pessoaResponsavel.nome }}</td>
-            <td><a :href="`#/apartamento/list/${apartamento.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/apartamento/editar/${apartamento.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          <tr>
+            <td>APT0 103</td>
+            <td>Matheus</td>
+            <td>Conceição</td>
+             <td><a :href="`#/apartamento/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/apartamento/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr>
+          <tr>
+            <td>APT0 104</td>
+            <td>Ana</td>
+            <td>Maria</td>
+             <td><a :href="`#/apartamento/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/apartamento/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>APT0 104</td>
+            <td>Beatriz</td>
+            <td>Erica</td>
+             <td><a :href="`#/apartamento/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/apartamento/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>APT0 105</td>
+            <td>Amanda</td>
+            <td>Ingrid</td>
+             <td><a :href="`#/apartamento/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/apartamento/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+         
         </tbody>
       </table>
     </div>

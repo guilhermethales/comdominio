@@ -17,21 +17,38 @@
       <table class="table" :class="tableClass">
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Email</th>
+            <th>Bloco</th>
+            <th>Sindico</th>
+            <th>Subsindico</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="bloco in lista">
-            <td>{{ bloco.descricao }}</td>
-            <td>{{ bloco.cpfcnpj }}</td>
-            <td>{{ bloco.telefone }}</td>
-            <td>{{ bloco.email }}</td>
-            <td><a :href="`#/bloco/list/${bloco.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/bloco/editar/${bloco.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          <tr>
+             <td>Bloco 1 </td>
+             <td>Matheus</td>
+             <td>Carlos</td>
+             <td><a :href="`#/bloco/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/bloco/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr>
+          <tr>
+             <td>Bloco 2 </td>
+             <td>Maria</td>
+             <td>Ana</td>
+             <td><a :href="`#/bloco/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/bloco/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+             <td>Bloco 3 </td>
+             <td>Beto</td>
+             <td>Ricardo</td>
+             <td><a :href="`#/bloco/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/bloco/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+             <td>Bloco 4 </td>
+             <td>Amanda</td>
+             <td>Aline</td>
+             <td><a :href="`#/bloco/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/bloco/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+         
         </tbody>
       </table>
     </div>

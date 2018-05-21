@@ -23,25 +23,25 @@
           </tr>
           <tr>
             <td>2</td>
-            <td>Manutenção Extintores</td>
-            <td>600</td>
+            <td>Energia Eletrica Abril</td>
+            <td>300</td>
             <td><a :href="`#/lancamento/list/${1}`" class="btn btn-sm btn-default btn-small">Visualizar</a><a :href="`#/lancamento/editar/${1}`" class="btn btn-sm btn-primary btn-small" style="margin:0 5px;">Editar</a></td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Manutenção Extintores</td>
-            <td>600</td>
+            <td>Energia Eletrica Maio</td>
+            <td>400</td>
             <td><a :href="`#/lancamento/list/${1}`" class="btn btn-sm btn-default btn-small">Visualizar</a><a :href="`#/lancamento/editar/${1}`" class="btn btn-sm btn-primary btn-small" style="margin:0 5px;">Editar</a></td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Manutenção Extintores</td>
-            <td>600</td>
+            <td>Energia Eletrica Julho</td>
+            <td>300</td>
             <td><a :href="`#/lancamento/list/${1}`" class="btn btn-sm btn-default btn-small">Visualizar</a><a :href="`#/lancamento/editar/${1}`" class="btn btn-sm btn-primary btn-small" style="margin:0 5px;">Editar</a></td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Manutenção Extintores</td>
+            <td>Energia Eletrica Julho</td>
             <td>600</td>
             <td><a :href="`#/lancamento/list/${1}`" class="btn btn-sm btn-default btn-small">Visualizar</a><a :href="`#/lancamento/editar/${1}`" class="btn btn-sm btn-primary btn-small" style="margin:0 5px;">Editar</a></td>
           </tr>

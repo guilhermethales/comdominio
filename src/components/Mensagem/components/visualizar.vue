@@ -1,23 +1,22 @@
 <template>
   <div>
     <div class="header">
-      <h1 class="title__item">Informações do mensagem</h1>
+      <h1 class="title__item">Informações Mensagem</h1>
 			<ModalAction v-if="confirmModal"/>
     </div>
 
     <div class="main">
-      <div class="container">
-        <div class="row">
+      <div >
+        <div class="row" style="padding-left:20px;">
           <div class="col col-md-12">
-          <h1 class="main-title">mensagem {{ mensagem.nome }}</h1>
+          <h1 class="main-title">Mensagem </h1>
 
-          <p>Nome: {{ mensagem.nome }}</p>
-          <p>CPF: {{ mensagem.cpfcnpj }}</p>
-          <p>Telefone: {{ mensagem.telefone }}</p>
-          <p>Email: {{ mensagem.email }}</p>
-          <p>Login: {{ mensagem.login }}</p>
+          <p>Titulo: Lixo	</p>
+          <p>Descrição:Descarte seu lixo corretamente	 </p>
+          <p>Data criação: 01/01/2018	</p>
+          
 
-            <a :href="`#/mensagem/editar/${mensagem.id}`" class="btn btn-primary" style="margin:0 5px;">Editar</a>
+            <a :href="`#/mensagem/editar/${1}`" class="btn btn-primary" style="margin:0 5px;">Editar</a>
             <a href="" class="btn btn-danger" @click.prevent="confirmDelete(mensagem.id)">Excluir</a>
           </div>
         </div>

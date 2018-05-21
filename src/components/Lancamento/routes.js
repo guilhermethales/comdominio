@@ -17,22 +17,22 @@ export default [
     children: [
       {
         path: 'lancamento',
-        name: 'lancamento',
+        name: 'lançamento',
         component: Lancamento
       },
       {
         path: '/lancamento/novo',
-        name: 'InserirLancamento',
+        name: 'Inserir Lançamento',
         component: inserirLancamento
       },
       {
         path: '/lancamento/editar/:id',
-        name: 'Editarlancamento',
+        name: 'Editar lançamento',
         component: editarLancamento
       },
       {
         path: '/lancamento/list/:id',
-        name: 'VisualizarLancamento',
+        name: 'Visualizar Lançamento',
         component: visualizarLancamento
       }
     ]

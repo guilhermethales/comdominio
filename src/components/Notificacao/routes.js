@@ -22,17 +22,17 @@ export default [
       },
       {
         path: '/notificacao/novo',
-        name: 'InserirNotificacao',
+        name: 'Inserir Notificação',
         component: inserirNotificacao
       },
       {
         path: '/notificacao/editar/:id',
-        name: 'EditarNotificacao',
+        name: 'Editar Notificação',
         component: editarNotificacao
       },
       {
         path: '/notificacao/list/:id',
-        name: 'VisualizarNotificacao',
+        name: 'Visualizar Notificação',
         component: visualizarNotificacao
       }
     ]

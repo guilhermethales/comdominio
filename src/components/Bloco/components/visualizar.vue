@@ -6,16 +6,13 @@
     </div>
 
     <div class="main">
-      <div class="container">
-        <div class="row">
+      <div>
+        <div class="row" style="padding-left:20px;">
           <div class="col col-md-12">
-          <h1 class="main-title">Bloco {{ bloco.nome }}</h1>
+          <h1 class="main-title">Bloco 1</h1>
 
-          <p>Nome: {{ bloco.nome }}</p>
-          <p>CPF: {{ bloco.cpfcnpj }}</p>
-          <p>Telefone: {{ bloco.telefone }}</p>
-          <p>Email: {{ bloco.email }}</p>
-          <p>Login: {{ bloco.login }}</p>
+          <p>Sindico: Matheus   </p>
+          <p>Subsindico: Carlos</p>
 
             <a :href="`#/bloco/editar/${bloco.id}`" class="btn btn-primary" style="margin:0 5px;">Editar</a>
             <a href="" class="btn btn-danger" @click.prevent="confirmDelete(bloco.id)">Excluir</a>

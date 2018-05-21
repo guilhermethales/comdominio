@@ -17,21 +17,28 @@
       <table class="table" :class="tableClass">
         <thead>
           <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Email</th>
+            <th>Descrição</th>
+            <th>Tipo</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="servico in servico">
-            <td>{{ servico.nome }}</td>
-            <td>{{ servico.cpfcnpj }}</td>
-            <td>{{ servico.telefone }}</td>
-            <td>{{ servico.email }}</td>
-            <td><a :href="`#/servico/list/${servico.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/servico/editar/${servico.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          <tr>
+            <td>Cortar Grama</td>
+            <td>Jardinagem</td>
+            <td><a :href="`#/servico/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/servico/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr>
+          <tr>
+            <td>Limpeza</td>
+            <td>Limpeza Piscina</td>
+            <td><a :href="`#/servico/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/servico/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          <tr>
+            <td>Construção</td>
+            <td>Pedreiro</td>
+            <td><a :href="`#/servico/list/${1}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/servico/editar/${1}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
+          </tr>
+          
         </tbody>
       </table>
     </div>

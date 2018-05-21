@@ -4,7 +4,7 @@ export default {
   template: require('./form.html'),
   data () {
     return {
-      sub_title: 'Cadastro de Morador',
+      sub_title: 'Cadastro de Serviço',
       servico: {
         tipoPessoa: { id: 2 }
       }

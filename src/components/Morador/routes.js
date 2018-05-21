@@ -22,17 +22,17 @@ export default [
       },
       {
         path: '/morador/novo',
-        name: 'InserirMorador',
+        name: 'Inserir Morador',
         component: inserirMorador
       },
       {
         path: '/morador/editar/:id',
-        name: 'EditarMorador',
+        name: 'Editar Morador',
         component: editarMorador
       },
       {
         path: '/morador/list/:id',
-        name: 'VisualizarMorador',
+        name: 'Visualizar Morador',
         component: visualizarMorador
       }
     ]

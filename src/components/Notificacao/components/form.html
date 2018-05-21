@@ -8,33 +8,31 @@
       <form @submit.prevent="validateBeforeSubmit">
         <div class="row">
           <div class="form-group col col-md-6">
-            <label for="email">Nome:</label>
+            <label for="email">Titulo:</label>
             <input name="nome" v-model="notificacao.nome" type="text" v-validate="'required'" class="form-control border-input" id="nome">
             <span class="alert-error" v-show="errors.has('nome')">{{ errors.first('nome') }}</span>
           </div>
           <div class="form-group col col-md-6">
-              <label for="email">Email:</label>
+              <label for="email">Descrição:</label>
               <input v-model="notificacao.email" v-validate="'required|email'" type="email" name="email" :class="{'input': true, 'is-danger': errors.has('email') }" class="form-control border-input" id="email">
               <span class="alert-error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
           </div>
         </div>
         <div class="row">
-          <div class="form-group col col-md-2">
-            <label for="pwd">CPF:</label>
-            <input v-model="notificacao.cpfcnpj" type="text" class="form-control border-input" id="cpfcnpj">
+          <div class="form-group col col-md-6">
+            <label for="pwd">Destinatário:</label>
+            <select class="form-control border-input" id="sel1">
+                <option>Matheus</option>
+                <option>Ana</option>
+                <option>Maria</option>
+                <option>Julia</option>
+              </select>
           </div>
-          <div class="form-group col col-md-2">
-            <label for="pwd">Telefone:</label>
-            <input v-model="notificacao.telefone" type="text" class="form-control border-input" id="telefone">
+          <div class="form-group col col-md-6">
+            <label for="pwd">Data:</label>
+            <input v-model="notificacao.telefone" type="date" class="form-control border-input" id="telefone">
           </div>
-          <div class="form-group col col-md-4">
-            <label for="pwd">Login:</label>
-            <input v-model="notificacao.login" type="text" class="form-control border-input" id="login">
-          </div>
-          <div class="form-group col col-md-4">
-            <label for="pwd">Senha:</label>
-            <input v-model="notificacao.senha" type="password" class="form-control border-input" id="senha">
-          </div>
+         
         </div>
         <div class="row">
           <button type="submit" class="btn btn-success btn-salvar">Salvar</button>

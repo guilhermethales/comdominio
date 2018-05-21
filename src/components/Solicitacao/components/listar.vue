@@ -3,12 +3,10 @@
     <div class="header">
       <slot name="header">
         <div class="row">
-          <div class="col col-md-9">
+          <div class="col col-md-12">
             <input type="text" v-model="configs.filter" class="form-control border-input" placeholder="Pesquise pelo nome do solicitacao">
           </div>
-          <div class="col col-md-3">
-            <a href="#/solicitacao/novo" class="btn btn-warning">Novo solicitacao</a>
-          </div>
+          
         </div>
       </slot>
       <ModalAction v-if="confirmModal"/>
@@ -34,37 +32,14 @@
             <td><a :href="`#/solicitacao/list/${solicitacao.id}`" class="btn btn-sm btn-default">Visualizar</a><a :href="`#/solicitacao/editar/${solicitacao.id}`" class="btn btn-sm btn-primary" style="margin:0 5px;">Editar</a></td>
           </tr> -->
           <tr>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
+            <td>04/07/2018</td>
+            <td>08/07/2018</td>
+            <td>Festa Junina</td>
+            <td>23</td>
+            <td>Matheus</td>
             <td><input type="checkbox"></td>
           </tr>
-           <tr>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td><input type="checkbox"></td>
-          </tr>
-           <tr>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td><input type="checkbox"></td>
-          </tr>
-           <tr>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td><input type="checkbox"></td>
-          </tr>
+          
         </tbody>
       </table>
     </div>

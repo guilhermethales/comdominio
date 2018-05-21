@@ -22,17 +22,17 @@ export default [
       },
       {
         path: '/agendamento/novo',
-        name: 'InserirAgendamento',
+        name: 'Inserir Agendamento',
         component: inserirAgendamento
       },
       {
         path: '/agendamento/editar/:id',
-        name: 'EditarAgendamento',
+        name: 'Editar Agendamento',
         component: editarAgendamento
       },
       {
         path: '/agendamento/list/:id',
-        name: 'VisualizarAgendamento',
+        name: 'Visualizar Agendamento',
         component: visualizarAgendamento
       }
     ]
