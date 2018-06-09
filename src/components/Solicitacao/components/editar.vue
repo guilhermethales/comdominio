@@ -15,6 +15,14 @@ export default {
       this.$store.dispatch('updateSolicitacaor', this.solicitacao)
       this.$router.push(`/solicitacao/list/${this.solicitacao.id}`)
 			this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Solicitacao atualizado com sucesso!!!'})
+    },
+		validateBeforeSubmit() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          return this.save();
+        }
+      });
     }
   },
   computed: {

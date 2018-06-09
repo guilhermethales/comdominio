@@ -15,6 +15,14 @@ export default {
       this.$store.dispatch('updateLazer', this.lazer)
       this.$router.push(`/lazer/list/${this.lazer.id}`)
 			this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Lazer atualizado com sucesso!!!'})
+    },
+		validateBeforeSubmit() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          return this.save();
+        }
+      });
     }
   },
   computed: {

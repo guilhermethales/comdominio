@@ -15,6 +15,14 @@ export default {
       this.$store.dispatch('updateBloco', this.bloco)
       this.$router.push(`/bloco/list/${this.bloco.id}`)
 			this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Bloco atualizado com sucesso!!!'})
+    },
+		validateBeforeSubmit() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          return this.save();
+        }
+      });
     }
   },
   computed: {

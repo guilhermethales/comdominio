@@ -15,6 +15,14 @@ export default {
       this.$store.dispatch('updateMensagem', this.mensagem)
       this.$router.push(`/mensagem/list/${this.mensagem.id}`)
 			this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Mensagem atualizado com sucesso!!!'})
+    },
+		validateBeforeSubmit() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          return this.save();
+        }
+      });
     }
   },
   computed: {

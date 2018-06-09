@@ -15,6 +15,14 @@ export default {
       this.$store.dispatch('updateAgendamento', this.agendamento)
       this.$router.push(`/agendamento/list/${this.agendamento.id}`)
 			this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Agendamento atualizado com sucesso!!!'})
+    },
+		validateBeforeSubmit() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          return this.save();
+        }
+      });
     }
   },
   computed: {

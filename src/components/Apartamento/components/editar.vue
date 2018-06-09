@@ -15,6 +15,14 @@ export default {
       this.$store.dispatch('updateApartamento', this.apartamento)
       this.$router.push(`/apartamento/list/${this.apartamento.id}`)
 			this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'apartamento atualizado com sucesso!!!'})
+    },
+		validateBeforeSubmit() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          return this.save();
+        }
+      });
     }
   },
   computed: {

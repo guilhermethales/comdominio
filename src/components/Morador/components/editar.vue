@@ -15,6 +15,14 @@ export default {
       this.$store.dispatch('updateMorador', this.morador)
       this.$router.push(`/morador/list/${this.morador.id}`)
 			this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Morador atualizado com sucesso!!!'})
+    },
+		validateBeforeSubmit() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          return this.save();
+        }
+      });
     }
   },
   computed: {

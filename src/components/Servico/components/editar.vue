@@ -15,6 +15,14 @@ export default {
       this.$store.dispatch('updateServico', this.servico)
       this.$router.push(`/servico/list/${this.servico.id}`)
 			this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Servico atualizado com sucesso!!!'})
+    },
+		validateBeforeSubmit() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          return this.save();
+        }
+      });
     }
   },
   computed: {

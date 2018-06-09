@@ -15,6 +15,14 @@ export default {
       this.$store.dispatch('updateNotificacao', this.notificacao)
       this.$router.push(`/notificacao/list/${this.notificacao.id}`)
 			this.$store.dispatch('getUpdateConfirmModal', {show: true, message: 'Notificacao atualizado com sucesso!!!'})
+    },
+		validateBeforeSubmit() {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          // eslint-disable-next-line
+          return this.save();
+        }
+      });
     }
   },
   computed: {
